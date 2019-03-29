@@ -1,0 +1,9 @@
+title: Open Data Toolkit
+email: data.gov.au/contact
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: datagovau
+github_username:  datagovau
+
+# Build settings
+markdown: kramdown

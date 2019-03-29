@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Data Linking Information Series Sheet 4: Probabilistic linking - Data.gov.au</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Data_Linking_Information_Series_Sheet_4:_Probabilistic_linking","wgTitle":"Data Linking Information Series Sheet 4: Probabilistic linking","wgCurRevisionId":1057,"wgRevisionId":1057,"wgArticleId":177,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Data_Linking_Information_Series_Sheet_4:_Probabilistic_linking","wgRelevantArticleId":177,"wgRequestId":"e8cc3b9657fd10b4030176a5","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.tokens@0c1bg6f",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="style.css"/>
+<script async="" src="site.js"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.31.0"/>
+<link rel="shortcut icon" href="http://toolkit.data.gov.au/favicon.ico"/>
+
+
+
+<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Data_Linking_Information_Series_Sheet_4_Probabilistic_linking rootpage-Data_Linking_Information_Series_Sheet_4_Probabilistic_linking skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">Data Linking Information Series Sheet 4: Probabilistic linking</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From Data.gov.au</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="./Data_Linking_Information_Series_Sheet_4:_Probabilistic_linking.html#mw-head">navigation</a>, 					<a href="./Data_Linking_Information_Series_Sheet_4:_Probabilistic_linking.html#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
+
+<h1>Data Linking Information Series</h1>
+<ul><li><a href="Data_Linking_Information_Series_Contents_page.html" class="mw-redirect" title="Data Linking Information Series Contents page">Data Linking Information Series</a></li>
+<li><a href="./Data_Linking_Information_Series_Sheet_1:_What_is_data_linking.html" title="Data Linking Information Series Sheet 1: What is data linking">What is data linking?</a></li>
+<li><a href="./Data_Linking_Information_Series_Sheet_2:_Preparing_for_linking.html" title="Data Linking Information Series Sheet 2: Preparing for linking">Preparing for linking</a></li>
+<li><a href="./Data_Linking_Information_Series_Sheet_3:_Deterministic_linking_and_linkage_keys.html" title="Data Linking Information Series Sheet 3: Deterministic linking and linkage keys">Deterministic linking and linkage keys</a></li>
+<li><a class="mw-selflink selflink">Probalistic linking</a></li>
+<li><a href="./Data_Linking_Information_Series_Sheet_5:_Linked_data_quality.html" title="Data Linking Information Series Sheet 5: Linked data quality">Linked data quality</a></li>
+<li><a href="Statistical_Data_Integration.html" title="Statistical Data Integration">Statistical Data Integration</a></li></ul>
+<p><br />
+</p><p>Probabilistic linking is a method for combining information from records on different datasets to form a new linked dataset.
+</p><p>It has been described as a process that attempts to link records on different files that have the greatest probability of belonging to the same person/organisation.
+</p><p>Whereas deterministic (or exact) linking uses a unique identifier to link datasets, probabilistic linking uses a number of identifiers, in combination, to identify and evaluate links.
+</p><p>Probabilistic linking is generally used when a unique identifier is not available or is of insufficient quality.
+</p><p>The method derives its name from the probabilistic framework developed by Fellegi and Sunter (1969) and requires sophisticated software to perform the calculations. References at the end of this sheet provide more information about linking algorithms.
+</p><p>The key steps of probabilistic linking (as shown in Diagram 1) are:
+1. Data cleaning and standardisation
+2. Blocking
+3. Linking
+4. Clerical review
+5. Evaluating data quality
+</p><p><b>Diagram 1: Key steps in probabilistic linking</b>
+</p><p><img alt="Data Linking - Sheet 4 - Diagram 1.jpeg" src="/images/9/9c/Data_Linking_-_Sheet_4_-_Diagram_1.jpeg" width="1666" height="1340" />
+</p>
+<h1>Key Terms</h1>
+<ul><li><b>Blocking</b> – divides datasets into groups, called blocks, in order to reduce the number of comparisons that need to be conducted to find which pairs of records should be linked. Only records in corresponding blocks on each dataset are compared, to identify possible links.</li>
+<li><b>Fields</b> – types of information, such as name, address, date of birth, on the records in datasets.</li>
+<li><b>Linked dataset</b> – the result of linking different datasets is a new dataset whose records contain some information from each of the original datasets.</li>
+<li><b>Links</b> – records that have been combined after being assessed as referring to the same entity (i.e., person/family/organisation/region).</li>
+<li><b>Unique identifier</b> – a number or code that uniquely identifies a person, business or organisation, such as passport number or Australian Business Number (ABN).</li></ul>
+<h1>Key steps in probabilistic linking</h1>
+<h2>1. Data cleaning and standardisation</h2>
+<p>See <a href="./Data_Linking_Information_Series_Sheet_2:_Preparing_for_linking.html" title="Data Linking Information Series Sheet 2: Preparing for linking">Sheet 2</a> in this information series.
+</p>
+<h2>2. Blocking</h2>
+<p>Data linking involves a large number of record comparisons. Ideally, every record on Dataset A is compared with each one on Dataset B to find which record pairs are most likely to be links. However, if every record is compared between two datasets containing 100 000 records each, this would require 10 billion comparisons. Even using advanced computer power, this would take a long time to perform.
+</p><p>As a way to save time, ‘blocking’ is used to reduce the number of record comparisons required to find potential record pairs.
+</p><p>Blocking is similar to sorting a basket of socks into like colours before trying to locate the pairs. See Diagram 2.
+</p><p>For example, by using gender for blocking, only records with the same sex (males or females) are compared to each other, which usually cuts in half the number of comparisons required.
+</p><p>However, gender is not overly useful for blocking as it only separates the dataset into two large blocks, so a lot of comparisons are still required. Ideally, a blocking strategy should result in small, equal-sized blocks on each dataset.
+</p><p>For example, using month of birth would result in 12 blocks (one for each month) and be expected to have a fairly even number of records in each block. A common strategy is to keep the block sizes as small as possible and run multiple blocking passes.
+</p><p>Blocking passes
+Sometimes links are missed because the information in the selected blocks was missing or incorrectly recorded.
+</p><p><br />
+Diagram 2: Example of blocking
+<img alt="Data Linking - Sheet 4 - Diagram 2.jpeg" src="/images/e/ea/Data_Linking_-_Sheet_4_-_Diagram_2.jpeg" width="1147" height="564" />
+</p><p><br />
+To compensate for possible errors in the data, a different blocking field may be used for a re-run of the linking process. This is called a blocking pass. Each time a pass occurs, the links are kept and the remaining unlinked records are subjected to another pass using a different block. Each blocking pass can be based on one or more fields (see Table 1).
+</p><p>The more blocking passes used, the more links are likely to be identified, but there will generally be diminishing returns on subsequent passes.
+</p><p>Devising a blocking strategy
+Although all the fields that are common to both datasets could potentially be used to compare the records, some are more appropriate than others, as discussed in Table 1.
+</p><p>Selecting which fields will be used for blocking and linking should be established before the process starts. It is good practice to plan and document the blocking strategy used for the project.
+</p><p>Blocking often requires some trial and error to determine the best outcome. References at the end of this sheet provide more information on blocking.
+</p><p><b>Table 1: Considerations when choosing which fields to use for linking and blocking</b>
+</p>
+<table>
+<tbody><tr>
+<th>Surnames
+</th>
+<td>Standardising makes this field more useful for linking and blocking. Sometimes parts of the surname and first name (e.g., first two letters of each) may be used as a blocking variable. Note that name changes can occur as a result of marriage and divorce and sometimes surnames and first names are swapped around. Spelling variations can result from errors during recording or transcription.
+</td></tr>
+<tr>
+<th>First names
+</th>
+<td>Inconsistencies can result when both nicknames and formal names are used interchangeably, which can cause discrepancies between data sources.
+</td></tr>
+<tr>
+<th>Gender
+</th>
+<td>Gender is not overly useful for blocking as it only separates the datasets into two large blocks. Gender is often good for linking as it is generally well reported and unlikely to change during a person’s lifetime.
+</td></tr>
+<tr>
+<th>Birth date
+</th>
+<td>Birth month and birth day are usually reliable because they do not change over a person’s lifetime and are usually well reported. If age is collected, it can be checked against birth year for consistency. There may be different date formats (e.g., MM/DD/YYYY or DD/MM/YYYY) which can be addressed by standardisation. Transcription errors may occur when digits are accidentally transposed. Blocking often uses month and year aggregated, rather than the date of birth.
+</td></tr>
+<tr>
+<th>Age
+</th>
+<td>Age may be checked against birth year, if available. Age groups may be used as blocks. It is not recommended that age be used in the same blocking pass as birth date because there is a direct relationship between the two fields.
+</td></tr>
+<tr>
+<th>Address
+</th>
+<td>As with birth dates, there can be formatting differences in address records, so these generally require standardising. People may change address and sometimes use postal address and street address interchangeably, which affects its usefulness. However, address can still be useful for confirming matches. When address is used in combination with other non-geographical blocks, there is still a chance of identifying links even if people have moved address. For blocking, it is often useful to use an aggregated form of address, such as the suburb or postcode.
+</td></tr></tbody></table>
+<h2>3. Linking</h2>
+<p>Linking involves a number of steps including assigning field probabilities and using these to calculate field and composite weights. The weights reflect the similarities of each pair of records and provide a way to decide whether they are links, or not.
+</p><p>Calculating probabilities===
+Each linking field (e.g., name, address, date of birth) on a record has two probabilities associated with it. They are called the ‘m’ and ‘u’ probabilities.
+</p><p>The <i>m probability</i> is the likelihood of the field values agreeing on a pair of records, given the records refer to the same entity (e.g., person, organisation).
+</p><p>It can be thought of as follows: if two different datasets contain records that refer to the same person, what would prevent the information in those records from agreeing? The answer is usually errors in spelling or missing information. 
+</p><p>Therefore, the m probability reflects the reliability of the field, and is calculated as 1 minus the error rate of the field. For example, most people report their gender consistently over time and on different datasets, so the m probability is close to 1 (0.95 in the example on the next page). Address, however,may only have an m probability of 0.7 because different datasets can have different addresses for the same person because they may have moved house.
+</p><p>The probabilistic linking software is used to produce estimates for the m probability. These estimates may be based on prior knowledge of the datasets or similar linking projects, through the identification of a large number of linked and non-linked records that ‘train’ the software, or by using the EM (Expectation-Maximisation) algorithm (see Samuels, 2012 for more information).
+</p><p>The <i>u probability</i> is the likelihood that the field values on two records will agree, given the two records refer to different entities.
+</p><p>It is essentially a measure of how likely two fields on different records will agree by chance. Another way to think of this is: given two records belong to two different people, what is the probability that they will agree anyway?
+</p><p>The u probability is often estimated by 1/n (where n is the number of possible values). For gender, there are two possible values (male or female) so the u probability for gender is ½ (0.5). For month of birth, the u probability can be estimated as 1/12 (0.08).
+</p>
+<h3>Calculating the field weights</h3>
+<p>Using the m and u probabilities, the probabilistic linking software generates an estimate of how closely the relevant fields agree on each record pair being compared. This is called a field weight.
+</p><p>In practice, field weights may be modified to allow for partial agreement, such as a minor difference in spelling (e.g., Block vs Black in the example in Box 1).
+</p><p>This is achieved using a ‘string comparator’ to generate a lower, but still positive agreement field weight depending on the specified degree of similarity. Some string comparator options include:
+</p>
+<ul><li>Exact match where the fields either agree or they do not − no adjustment is made to the field weight (e.g., gender).</li>
+<li>Exact match but the weight is modified so that rarer values are given higher weights than more common values when they agree (e.g., country of birth).</li>
+<li>Approximate string comparison (e.g., name) where the weight depends on the number of characters that differ, allowing for misspellings and poor handwriting (see Winkler, 1990).</li></ul>
+<p>For more information about m and u probabilities and field weights, refer to Fellegi and Sunter (1969).
+</p><p>For each possible record pair, the field weights are summed to produce an overall weight − the composite weight. The higher the composite weight, the more likely that both records refer to the same entity. Box 1 provides a highly simplified example of this process.
+</p>
+<h3>Determining links based on threshold cut-offs</h3>
+<p>The composite weight for each record pair is compared to the cut-off threshold. If the composite weight is above the cut-off, the record pair is deemed to be a link. If the composite weight is below the cut-off, the record pair is deemed not to be a link. Sometimes two cut-off thresholds (upper and lower) are used. 
+</p><p>A key feature of this methodology is the ability to rank all of the possible links and then, using an ‘optimal threshold’ algorithm (see Christen, 2012), assign the link to the most optimal record pair based on how well the records match. 
+</p><p>Various manual and automated methods are available to determine thresholds based on the distribution of the composite weights for the linked records.
+</p><p><br />
+</p>
+<h2>4. Clerical Review</h2>
+<p>Clerical review is a useful tool to manually assess those records without a designated link/non-link status and to examine records close to the thresholds to check if they are links.
+</p><p>However, clerical review is time-consuming and resource-intensive. To minimise the number of records that need to be reviewed, it is necessary to ensure that threshold values are appropriate and the linking software is operating as efficiently as possible. For more information on clerical review see Guiver (2011).
+</p>
+<h2>5. Evaluating data quality</h2>
+<p>This is covered in <a href="./Data_Linking_Information_Series_Sheet_2:_Preparing_for_linking.html" title="Data Linking Information Series Sheet 2: Preparing for linking">Information Sheet 2</a> and <a href="./Data_Linking_Information_Series_Sheet_5:_Linked_data_quality.html" title="Data Linking Information Series Sheet 5: Linked data quality">Information Sheet 5</a>.
+</p><p><b>Box 1: A simplified example of probabilistic linking</b>
+</p><p>The following example is taken from the Statistics New Zealand Data Integration Manual.
+</p><p>It looks at two records on two different datasets to see whether they are a match and, therefore, should be linked.
+</p>
+<table>
+<tbody><tr>
+<th>Field</th>
+<th>Record A</th>
+<th>Record B
+</th></tr>
+<tr>
+<th>Name
+</th>
+<td>Jon Block
+</td>
+<td>John Black
+</td></tr>
+<tr>
+<th>Date of birth
+</th>
+<td>23-11-65
+</td>
+<td>23-11-63
+</td></tr>
+<tr>
+<th>Sex
+</th>
+<td>M
+</td>
+<td>M
+</td></tr>
+<tr>
+<th>Address
+</th>
+<td>89 Molesworth Street
+</td>
+<td>112 Hiropi Street
+</td></tr></tbody></table>
+<p>The linking software assigns m and u probabilities for each field (shown below) which range between 0 and 1.
+</p><p>(The calculation of the agreement field weight is log2[m/u]. The disagreement field weight is log2([1 − m]/[1 −u]).)
+</p>
+<table>
+<tbody><tr>
+<th>Field</th>
+<th>m probability</th>
+<th>u probability</th>
+<th>Agreement field weight</th>
+<th>Disagreement field weight
+</th></tr>
+<tr>
+<th>Name
+</th>
+<td>0.95</td>
+<td>0.01</td>
+<td>6.57</td>
+<td>−4.31
+</td></tr>
+<tr>
+<th>Date of birth
+</th>
+<td>0.9</td>
+<td>0.01</td>
+<td>6.49</td>
+<td>−3.31
+</td></tr>
+<tr>
+<th>Sex
+</th>
+<td>0.95</td>
+<td>0.5</td>
+<td>0.93</td>
+<td>−3.32
+</td></tr>
+<tr>
+<th>Address
+</th>
+<td>0.7</td>
+<td>0.01</td>
+<td>6.13</td>
+<td>−1.72
+</td></tr></tbody></table>
+<p>The fields on the two records are compared (see table below). Field weights with positive values indicate that fields agree, while negative values indicate disagreement. In this example, the field weight of −1.72 indicates that the records do not agree on address.
+</p><p>For simplicity, this example assumes no partial field agreement, although in practice, ‘Jon’ and ‘John’ are sufficiently similar that there would probably be some sort of adjustment to the field weights to take account of this, resulting in a lower, but still positive, agreement weight.
+</p>
+<table>
+<tbody><tr>
+<th>Field</th>
+<th>File A</th>
+<th>File B</th>
+<th>Agreement?</th>
+<th>Field weight
+</th></tr>
+<tr>
+<th>Name
+</th>
+<td>Jon Block</td>
+<td>John Black</td>
+<td>No</td>
+<td>−4.31
+</td></tr>
+<tr>
+<th>Date of birth
+</th>
+<td>23-11-65</td>
+<td>23-11-63</td>
+<td>No</td>
+<td>−3.31
+</td></tr>
+<tr>
+<th>Sex
+</th>
+<td>M</td>
+<td>M</td>
+<td>Yes</td>
+<td>0.93
+</td></tr>
+<tr>
+<th>Address
+</th>
+<td>89 Molesworth Street</td>
+<td>112 Hiropi Street</td>
+<td>No</td>
+<td>−1.72
+</td></tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Composite weight (sum of field weights)</td>
+<td>−8.41
+</td></tr></tbody></table>
+<p>The field weights are summed: (−4.31) + (−3.31) + (0.93) + (−1.72) = −8.41 (= composite weight). As the composite weight in this example is negative (−8.41), the linking process would determine that these records are a non-link. 
+</p><p>For more information, see Statistics New Zealand, Data Integration Manual, 2006, pp.36-44.
+</p><p><br />
+</p>
+<h1>For more information</h1>
+<h2>Probabilistic linking theory</h2>
+<ul><li>Fellegi, I. and Sunter, A. 1969, ‘<i><a rel="nofollow" class="external text" href="http://www.tandfonline.com/doi/abs/10.1080/01621459.1969.10501049">A Theory for Record Linkage</a></i>’, Journal of the American Statistical Association, Vol.64, no.328, pp. 1183-1210.</li>
+<li>Winkler, W.E. 2006, ‘<i><a rel="nofollow" class="external text" href="http://www.census.gov/srd/papers/pdf/rrs2006-02.pdf">Overview of Record Linkage and Current Research Directions</a></i>’, Research Report Series, no. 2006–2, Statistical Research Division, U.S. Census Bureau, Washington.</li></ul>
+<h2><span id="Linking_(including_m_and_u_probabilities)"></span>Linking (including m and u probabilities)</h2>
+<ul><li>Christen, P. 2012, Data Matching: Concepts and Techniques for Record Linkage, Entity Resolution, and Duplicate Detection, Springer, Canberra.</li>
+<li>Herzog, T.N., Scheuren, F.J. and Winkler, W.E. 2007, Data quality and record linkage techniques, Springer, New York.</li>
+<li>Jaro, M. 1995, ‘Probabilistic Linkage of Large Public Health Data Files’, Statistics in Medicine, Vol. 14, pp. 491-498.</li>
+<li>Samuels, C. 2012, ‘<i><a rel="nofollow" class="external text" href="http://www.ausstats.abs.gov.au/ausstats/subscriber.nsf/0/1A0CF265D28D518BCA257998000C0706/$File/1352055120_nov%202011.pdf">Using the EM Algorithm to Estimate the Parameters of the Fellegi-Sunter Model for Data Linking research paper</a></i>’, Methodology Advisory Committee Paper, Cat. no. 1352.0.55.120, Australian Bureau of Statistics, Canberra.</li>
+<li>Statistics New Zealand 2006, <i><a rel="nofollow" class="external text" href="http://www.stats.govt.nz/surveys_and_methods/methods/data-integration.aspx">Data Integration Manual</a></i>, Statistics New Zealand, Wellington.</li>
+<li>Winkler, W.E. 1990, ‘String Comparator Metrics and Enhanced Decision Rules in the Fellegi-Sunter Model of Record Linkage’, Proceedings of the Section on Survey Research Methods, American Statistical Association, pp. 354-359.</li></ul>
+<h2>Clerical review</h2>
+<ul><li>Guiver, T. 2011, ‘<i><a rel="nofollow" class="external text" href="http://www.ausstats.abs.gov.au/ausstats/subscriber.nsf/0/C11215B63FE193C5CA25789A001CAE30/$File/1351055034_may%202011.pdf">Sampling-Based Clerical Review Methods in Probabilistic Linking</a></i>’, Methodology Research Papers, Cat. no. 1351.0.55.034, Australian Bureau of Statistics, Canberra.</li>
+<li>Bishop, G. and Khoo, J. 2007, ‘<i><a rel="nofollow" class="external text" href="http://www.ausstats.abs.gov.au/ausstats/subscriber.nsf/0/B0DC71355B3BAE09CA2572B3001EA00D/$File/1351055018_apr%202007.pdf">Methodology of Evaluating the Quality of Probabilistic Linking</a></i>’, Methodology Research Papers, Cat. no. 1351.0.55.018, Australian Bureau of Statistics, Canberra.</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20190325083729
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.038 seconds
+Real time usage: 0.079 seconds
+Preprocessor visited node count: 54/1000000
+Preprocessor generated node count: 60/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+</div>
+<!-- Saved in parser cache with key mediawiki_db:pcache:idhash:177-0!canonical and timestamp 20190325083729 and revision id 1057
+ -->
+</div>					
+				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/" title="Visit the main page [z]" accesskey="z">Main page</a></li>				</ul>
+							</div>
+		</div>
+			</div></div><div id="footer" role="contentinfo">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38578922-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-38578922-3');
+</script>
+
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 30 August 2018, at 03:58.</li>
+								<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
+							</ul>
+						
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<img src="/resources/assets/licenses/cc-by.png" alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and" width="88" height="31"/>					</li>
+										
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.038","walltime":"0.079","ppvisitednodes":{"value":54,"limit":1000000},"ppgeneratednodes":{"value":60,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20190325083729","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":97});});</script>
+	</body>
+</html>
