@@ -7,3 +7,6 @@ github_username:  datagovau
 
 # Build settings
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
+
