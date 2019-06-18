@@ -113,7 +113,7 @@ Although all the fields that are common to both datasets could potentially be us
 </p><p>Calculating probabilities===
 Each linking field (e.g., name, address, date of birth) on a record has two probabilities associated with it. They are called the ‘m’ and ‘u’ probabilities.
 </p><p>The <i>m probability</i> is the likelihood of the field values agreeing on a pair of records, given the records refer to the same entity (e.g., person, organisation).
-</p><p>It can be thought of as follows: if two different datasets contain records that refer to the same person, what would prevent the information in those records from agreeing? The answer is usually errors in spelling or missing information. 
+</p><p>It can be thought of as follows: if two different datasets contain records that refer to the same person, what would prevent the information in those records from agreeing? The answer is usually errors in spelling or missing information.
 </p><p>Therefore, the m probability reflects the reliability of the field, and is calculated as 1 minus the error rate of the field. For example, most people report their gender consistently over time and on different datasets, so the m probability is close to 1 (0.95 in the example on the next page). Address, however,may only have an m probability of 0.7 because different datasets can have different addresses for the same person because they may have moved house.
 </p><p>The probabilistic linking software is used to produce estimates for the m probability. These estimates may be based on prior knowledge of the datasets or similar linking projects, through the identification of a large number of linked and non-linked records that ‘train’ the software, or by using the EM (Expectation-Maximisation) algorithm (see Samuels, 2012 for more information).
 </p><p>The <i>u probability</i> is the likelihood that the field values on two records will agree, given the two records refer to different entities.
@@ -132,8 +132,8 @@ Each linking field (e.g., name, address, date of birth) on a record has two prob
 </p><p>For each possible record pair, the field weights are summed to produce an overall weight − the composite weight. The higher the composite weight, the more likely that both records refer to the same entity. Box 1 provides a highly simplified example of this process.
 </p>
 <h3>Determining links based on threshold cut-offs</h3>
-<p>The composite weight for each record pair is compared to the cut-off threshold. If the composite weight is above the cut-off, the record pair is deemed to be a link. If the composite weight is below the cut-off, the record pair is deemed not to be a link. Sometimes two cut-off thresholds (upper and lower) are used. 
-</p><p>A key feature of this methodology is the ability to rank all of the possible links and then, using an ‘optimal threshold’ algorithm (see Christen, 2012), assign the link to the most optimal record pair based on how well the records match. 
+<p>The composite weight for each record pair is compared to the cut-off threshold. If the composite weight is above the cut-off, the record pair is deemed to be a link. If the composite weight is below the cut-off, the record pair is deemed not to be a link. Sometimes two cut-off thresholds (upper and lower) are used.
+</p><p>A key feature of this methodology is the ability to rank all of the possible links and then, using an ‘optimal threshold’ algorithm (see Christen, 2012), assign the link to the most optimal record pair based on how well the records match.
 </p><p>Various manual and automated methods are available to determine thresholds based on the distribution of the composite weights for the linked records.
 </p><p><br />
 </p>
@@ -274,7 +274,7 @@ Each linking field (e.g., name, address, date of birth) on a record has two prob
 <td>Composite weight (sum of field weights)</td>
 <td>−8.41
 </td></tr></tbody></table>
-<p>The field weights are summed: (−4.31) + (−3.31) + (0.93) + (−1.72) = −8.41 (= composite weight). As the composite weight in this example is negative (−8.41), the linking process would determine that these records are a non-link. 
+<p>The field weights are summed: (−4.31) + (−3.31) + (0.93) + (−1.72) = −8.41 (= composite weight). As the composite weight in this example is negative (−8.41), the linking process would determine that these records are a non-link.
 </p><p>For more information, see Statistics New Zealand, Data Integration Manual, 2006, pp.36-44.
 </p><p><br />
 </p>
@@ -287,7 +287,7 @@ Each linking field (e.g., name, address, date of birth) on a record has two prob
 <li>Herzog, T.N., Scheuren, F.J. and Winkler, W.E. 2007, Data quality and record linkage techniques, Springer, New York.</li>
 <li>Jaro, M. 1995, ‘Probabilistic Linkage of Large Public Health Data Files’, Statistics in Medicine, Vol. 14, pp. 491-498.</li>
 <li>Samuels, C. 2012, ‘<i><a rel="nofollow" class="external text" href="http://www.ausstats.abs.gov.au/ausstats/subscriber.nsf/0/1A0CF265D28D518BCA257998000C0706/$File/1352055120_nov%202011.pdf">Using the EM Algorithm to Estimate the Parameters of the Fellegi-Sunter Model for Data Linking research paper</a></i>’, Methodology Advisory Committee Paper, Cat. no. 1352.0.55.120, Australian Bureau of Statistics, Canberra.</li>
-<li>Statistics New Zealand 2006, <i><a rel="nofollow" class="external text" href="http://www.stats.govt.nz/surveys_and_methods/methods/data-integration.aspx">Data Integration Manual</a></i>, Statistics New Zealand, Wellington.</li>
+<li>Statistics New Zealand 2006, <i><a rel="nofollow" class="external text" href="http://archive.stats.govt.nz/methods/data-integration.aspx">Data Integration Manual</a></i>, Statistics New Zealand, Wellington.</li>
 <li>Winkler, W.E. 1990, ‘String Comparator Metrics and Enhanced Decision Rules in the Fellegi-Sunter Model of Record Linkage’, Proceedings of the Section on Survey Research Methods, American Statistical Association, pp. 354-359.</li></ul>
 <h2>Clerical review</h2>
 <ul><li>Guiver, T. 2011, ‘<i><a rel="nofollow" class="external text" href="http://www.ausstats.abs.gov.au/ausstats/subscriber.nsf/0/C11215B63FE193C5CA25789A001CAE30/$File/1351055034_may%202011.pdf">Sampling-Based Clerical Review Methods in Probabilistic Linking</a></i>’, Methodology Research Papers, Cat. no. 1351.0.55.034, Australian Bureau of Statistics, Canberra.</li>
@@ -297,7 +297,7 @@ Each linking field (e.g., name, address, date of birth) on a record has two prob
 
 </div>
 
-</div>					
+</div>
 				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>				<div class="visualClear"></div>
 							</div>
 		</div>
@@ -329,14 +329,14 @@ Each linking field (e.g., name, address, date of birth) on a record has two prob
 								<li id="footer-info-lastmod"> This page was last edited on 30 August 2018, at 03:58.</li>
 								<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
 							</ul>
-						
+
 										<ul id="footer-icons" class="noprint">
 										<li id="footer-copyrightico">
 						<img src="/resources/assets/licenses/cc-by.png" alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and" width="88" height="31"/>					</li>
-										
+
 									</ul>
 						<div style="clear: both;"></div>
 		</div>
-		
+
 	</body>
 </html>
