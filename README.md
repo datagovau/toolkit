@@ -2,7 +2,7 @@
 As published here [Open Data Toolkit](https://toolkit.data.gov.au/), this repository contains the files and pages that make up the Open Data Toolkit. 
 This repository is managed by the [Digital Transformation Agency (DTA)](https://www.dta.gov.au).
 
-In early 2019, the Open Data Toolkit was moved from hosting via MediaWiki to hosting via this github repository. The DTA intends to continue a shared approach to the upkeep and expansion of the open data toolkit. Should wish to make a contribution, please get in touch with the DTA Open Data Service via email to data@digital.gov.au .
+In early 2019, the Open Data Toolkit was moved from hosting via MediaWiki to hosting via this github repository. The DTA intends to continue a shared approach to the upkeep and expansion of the open data toolkit. Should wish to make a contribution, please get in touch with the DTA Open Data Service via email to support@data.gov.au .
 
 
 ## Contribute
