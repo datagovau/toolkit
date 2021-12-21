@@ -1,167 +1,298 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
+
 <head>
-<meta charset="UTF-8"/>
-<title>Data Linking Information Series Sheet 3: Deterministic linking and linkage keys - Data.gov.au</title>
-<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
-<link rel="stylesheet" href="style.css"/>
-<script async="" src="site.js"></script>
-<meta name="google-site-verification" content="kajQGWxyqP9zf_uRRBX4nk0QxGRUDmzRnnbwkEBD_Yw" />
-<link rel="shortcut icon" href="http://toolkit.data.gov.au/favicon.ico"/>
-<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
+	<meta charset="UTF-8" />
+	<title>Data Linking Information Series Sheet 3: Deterministic linking and linkage keys - Data.gov.au</title>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace(/(^|\s)client-nojs(\s|$)/,
+			"$1client-js$2");
+	</script>
+	<link rel="stylesheet" href="style.css" />
+	<script async="" src="site.js"></script>
+	<meta name="google-site-verification" content="kajQGWxyqP9zf_uRRBX4nk0QxGRUDmzRnnbwkEBD_Yw" />
+	<link rel="shortcut icon" href="http://toolkit.data.gov.au/favicon.ico" />
+	<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
 </head>
-<body>		<div id="mw-page-base" class="noprint"></div>
-		<div id="mw-head-base" class="noprint"></div>
-		<div id="content" class="mw-body" role="main">
-			<a id="top"></a>
-			<div class="mw-indicators mw-body-content">
-</div>
-<h1 id="firstHeading" class="firstHeading" lang="en">Data Linking Information Series Sheet 3: Deterministic linking and linkage keys</h1>			<div id="bodyContent" class="mw-body-content">
-				<div id="siteSub" class="noprint">From Data.gov.au</div>				<div id="contentSub"></div>
-								<div id="jump-to-nav" class="mw-jump">
-					Jump to:					<a href="./Data_Linking_Information_Series_Sheet_3:_Deterministic_linking_and_linkage_keys.html#mw-head">navigation</a>, 					<a href="./Data_Linking_Information_Series_Sheet_3:_Deterministic_linking_and_linkage_keys.html#p-search">search</a>
-				</div>
-				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
 
-<h1>Data Linking Information Series</h1>
-<ul><li><a href="Data_Linking_Information_Series_Contents_page.html" class="mw-redirect" title="Data Linking Information Series Contents page">Data Linking Information Series</a></li>
-<li><a href="./Data_Linking_Information_Series_Sheet_1:_What_is_data_linking.html" title="Data Linking Information Series Sheet 1: What is data linking">What is data linking?</a></li>
-<li><a href="./Data_Linking_Information_Series_Sheet_2:_Preparing_for_linking.html" title="Data Linking Information Series Sheet 2: Preparing for linking">Preparing for linking</a></li>
-<li><a class="mw-selflink selflink">Deterministic linking and linkage keys</a></li>
-<li><a href="./Data_Linking_Information_Series_Sheet_4:_Probabilistic_linking.html" title="Data Linking Information Series Sheet 4: Probabilistic linking">Probalistic linking</a></li>
-<li><a href="./Data_Linking_Information_Series_Sheet_5:_Linked_data_quality.html" title="Data Linking Information Series Sheet 5: Linked data quality">Linked data quality</a></li>
-<li><a href="Statistical_Data_Integration.html" title="Statistical Data Integration">Statistical Data Integration</a></li></ul>
-<p><br />
-</p><p><br />
-Deterministic linking involves the exact matching of information on different records across the datasets being combined for a linking project.
-</p><p>The simplest form of deterministic linking uses a unique identifier, such as an Australian Business Number or a social security number, to determine if the records refer to the same entity. (An entity may be a person, household, organisation or locality.)
-</p><p>This is also called ‘exact linking’ because the identifier either matches or does not match. This means that if the unique identifier contains any errors, the matches will not be found because the identifiers must be identical on all the datasets being linked.
-</p><p>If it is the case that the unique identifiers may be unreliable for linking purposes, there are a number of other options available. One is to instead use probabilistic linking – see <a href="./Data_Linking_Information_Series_Sheet_4:_Probabilistic_linking.html" title="Data Linking Information Series Sheet 4: Probabilistic linking">Sheet 4</a>.
-</p><p>Other possible approaches include variations of deterministic linking, such as ‘stepwise deterministic linking’ and ‘rules-based linking’. These techniques use other information on the records to overcome deficiencies in the quality of the unique identifier. For more information, see the references on this sheet.
-</p><p>If a unique identifier is not available, or is not of sufficient quality, it is possible to create a proxy, often referred to as a linkage key.
-</p>
-<h1>Key Terms</h1>
-<ul><li><b>Confidentiality</b> – the legal and ethical obligation to maintain and protect the privacy and secrecy of the person, business, or organisation that provided their information.</li>
-<li><b>Content data</b> – the term used for the administrative or clinical information on a record (such as medical condition, income, educational attainment), as opposed to identifying information (such as name and address).</li>
-<li><b>Identifier</b> – for the purpose of data linking, an identifier is information that establishes the identity of an individual or organisation. For example, for individuals it is often name and address. Also see Unique identifier.</li>
-<li><b>Unique identifier</b> – a number or code that uniquely identifies a person, business or organisation, such as passport number or Australian Business Number (ABN).</li></ul>
-<h1>Creating a linkage key</h1>
-<p>A linkage key is a code created using a combination of identifying information on each record, such as name, address and date of birth (see Table 1 for an example).
-</p><p>The linkage key usually replaces identifiers on the linked record. If the records in the linked dataset are de-identified (by removing name and address), this helps to protect the identity of the people or organisations in the new dataset.
-</p><p>However, this does not necessarily ensure privacy protection. Even without name and address it may still be possible to recognise a person or organisation, through a set of unusual characteristics in the linked dataset. For example, small-area data (e.g., a suburb) showing a 17-year-old widow with four children could be recognisable to someone living in that area. Therefore, further confidentiality techniques need to be applied before releasing the data.
-</p><p>The <a href="http://toolkit.data.gov.au/index.php?title=Confidentiality_Series&amp;action=edit&amp;redlink=1" class="new" title="Confidentiality Series (page does not exist)">Confidentiality Series</a> provides more information on privacy and confidentiality.
-</p><p>Table 1 shows how a 12 character key might be built using:
-</p>
-<ul><li>the second, third and fifth letters of a person’s last name, second and third letter from a person’s first name</li>
-<li>the second, fourth, sixth and seventh numbers from a person’s date of birth (DD/MM/YYYY)</li>
-<li>gender (male is 1 and female is 2)</li>
-<li>the second and third numbers of the postcode.</li></ul>
-<p><b>Table 1: Example of creating a linkage key</b>
-</p>
-<table>
-<tbody><tr>
-<th>Name</th>
-<th>Date of birth</th>
-<th>Gender</th>
-<th>Postcode
-</th></tr>
-<tr>
-<td>John Smith</td>
-<td>12/05/1970</td>
-<td>Male</td>
-<td>5623
-</td></tr>
-<tr>
-<td>Linkage key = MIHOH2597162
-</td></tr></tbody></table>
-<p><br />
-As with the unique identifier, if there is an error or missing information on the records, the linkage key may not match exactly and therefore the records will not be linked.
-</p><p>As linkage keys use identifiers in their creation, technically they could be reconstructed, thereby identifying people in the dataset. Therefore, encryption of the key is recommended as an additional safety measure to avoid the risk of identification or re-identification.
-</p>
-<h1>An example of deterministic linking using a linkage key</h1>
-<p><b>Stage 1:</b> Assigning linkage keys to all records within datasets A and B.
-This example uses a linkage key (based on Table 1) for a project looking at educational attainment and earnings, by age and sex.
-</p><p><b>Stage 2:</b> Extracting the content data and unique identifier.
-In this example, the linkage key (MIHOH2597162) identifies the records that refer to the same person, in this case John Smith.
-</p><p><b>Stage 3:</b> Merging to create a linked record.
-Using the linkage key, only the information required for the project (highest educational attainment, income, sex and age) is extracted from each record and merged into a new linked record (now known by the identifier MIHOH2597162) in the new dataset. (See Diagram 1)
-</p><p><b>Diagram 1: A simple example of deterministic linking using a linkage key</b>
-</p><p><img alt="Data Linking Sheet 3 - Diagram 1.jpeg" src="/images/a/a5/Data_Linking_Sheet_3_-_Diagram_1.jpeg" width="1737" height="1124" />
-</p><p><br />
-</p>
-<h2>For more information</h2>
-<ul><li>Australian Institute of Health and Welfare and Australian Bureau of Statistics 2012, <i><a rel="nofollow" class="external text" href="http://www.aihw.gov.au/publication-detail/?id=10737422216">National best practice guidelines for data linkage activities relating to Aboriginal and Torres Strait Islander people</a></i>, AIHW Cat. no. IHW 74, AIHW, Canberra.</li>
-<li>Australian Institute of Health and Welfare 2011, ‘<i><a rel="nofollow" class="external text" href="http://www.aihw.gov.au/publication-detail/?id=10737418279">Comparing an SLK-based and a name-based data linkage strategy: an investigation into the PIAC linkage</a>]</i>’, Data linkage series, No. 11. Cat. no. CSI 11, AIHW, Canberra.</li>
-<li>Australian Institute of Health and Welfare: Karmel, R. 2005, ‘<i><a rel="nofollow" class="external text" href="http://www.aihw.gov.au/publication-detail/?id=6442467777">Data linkage protocols using a statistical linkage key</a></i>’, Data linkage series, No. 1. Cat. no. CSI 1, AIHW, Canberra.</li>
-<li>Bass, J. and Garfield, C. 2002, ‘<i><a rel="nofollow" class="external text" href="http://phidu.torrens.edu.au/publications-1999-to-2004/symposium-on-health-data-linkage-proceedings">Statistical linkage keys: How effective are they?</a></i>’ Proceedings of Symposium on health data linkage, Public Health Information Development Unit, held March 20-21 2002, Sydney, pp. 40-45.</li>
-<li>National Statistical Service 2011, <a href="http://toolkit.data.gov.au/index.php?title=Confidentiality_Information_Series&amp;action=edit&amp;redlink=1" class="new" title="Confidentiality Information Series (page does not exist)">Confidentiality Information Series</a>, National Statistical Service, Canberra <a rel="nofollow" class="external free" href="http://www.nss.gov.au">http://www.nss.gov.au</a></li>
-<li>NCSIMG 2004, <i><a rel="nofollow" class="external text" href="http://www.aihw.gov.au/publication-detail/?id=6442467611">Statistical Data Linkage in Community Services Data Collection</a></i>, AIHW, Canberra.</li></ul>
-
-
-
-</div>
-
-</div>
-				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>				<div class="visualClear"></div>
-							</div>
+<body>
+	<div id="mw-page-base" class="noprint"></div>
+	<div id="mw-head-base" class="noprint"></div>
+	<div id="content" class="mw-body" role="main">
+		<a id="top"></a>
+		<div class="mw-indicators mw-body-content">
 		</div>
-		<div id="mw-navigation">
+		<h1 id="firstHeading" class="firstHeading" lang="en">Data Linking Information Series Sheet 3: Deterministic
+			linking and linkage keys</h1>
+		<div id="bodyContent" class="mw-body-content">
+			<div id="siteSub" class="noprint">From Data.gov.au</div>
+			<div id="contentSub"></div>
+			<div id="jump-to-nav" class="mw-jump">
+				Jump to: <a
+					href="./Data_Linking_Information_Series_Sheet_3:_Deterministic_linking_and_linkage_keys.html#mw-head">navigation</a>,
+				<a
+					href="./Data_Linking_Information_Series_Sheet_3:_Deterministic_linking_and_linkage_keys.html#p-search">search</a>
+			</div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+				<div class="mw-parser-output">
+
+					<h1>Data Linking Information Series</h1>
+					<ul>
+						<li><a href="Data_Linking_Information_Series_Contents_page.html" class="mw-redirect"
+								title="Data Linking Information Series Contents page">Data Linking Information
+								Series</a></li>
+						<li><a href="./Data_Linking_Information_Series_Sheet_1:_What_is_data_linking.html"
+								title="Data Linking Information Series Sheet 1: What is data linking">What is data
+								linking?</a></li>
+						<li><a href="./Data_Linking_Information_Series_Sheet_2:_Preparing_for_linking.html"
+								title="Data Linking Information Series Sheet 2: Preparing for linking">Preparing for
+								linking</a></li>
+						<li><a class="mw-selflink selflink">Deterministic linking and linkage keys</a></li>
+						<li><a href="./Data_Linking_Information_Series_Sheet_4:_Probabilistic_linking.html"
+								title="Data Linking Information Series Sheet 4: Probabilistic linking">Probalistic
+								linking</a></li>
+						<li><a href="./Data_Linking_Information_Series_Sheet_5:_Linked_data_quality.html"
+								title="Data Linking Information Series Sheet 5: Linked data quality">Linked data
+								quality</a></li>
+						<li><a href="Statistical_Data_Integration.html" title="Statistical Data Integration">Statistical
+								Data Integration</a></li>
+					</ul>
+					<p><br />
+					</p>
+					<p><br />
+						Deterministic linking involves the exact matching of information on different records across the
+						datasets being combined for a linking project.
+					</p>
+					<p>The simplest form of deterministic linking uses a unique identifier, such as an Australian
+						Business Number or a social security number, to determine if the records refer to the same
+						entity. (An entity may be a person, household, organisation or locality.)
+					</p>
+					<p>This is also called ‘exact linking’ because the identifier either matches or does not match. This
+						means that if the unique identifier contains any errors, the matches will not be found because
+						the identifiers must be identical on all the datasets being linked.
+					</p>
+					<p>If it is the case that the unique identifiers may be unreliable for linking purposes, there are a
+						number of other options available. One is to instead use probabilistic linking – see <a
+							href="./Data_Linking_Information_Series_Sheet_4:_Probabilistic_linking.html"
+							title="Data Linking Information Series Sheet 4: Probabilistic linking">Sheet 4</a>.
+					</p>
+					<p>Other possible approaches include variations of deterministic linking, such as ‘stepwise
+						deterministic linking’ and ‘rules-based linking’. These techniques use other information on the
+						records to overcome deficiencies in the quality of the unique identifier. For more information,
+						see the references on this sheet.
+					</p>
+					<p>If a unique identifier is not available, or is not of sufficient quality, it is possible to
+						create a proxy, often referred to as a linkage key.
+					</p>
+					<h1>Key Terms</h1>
+					<ul>
+						<li><b>Confidentiality</b> – the legal and ethical obligation to maintain and protect the
+							privacy and secrecy of the person, business, or organisation that provided their
+							information.</li>
+						<li><b>Content data</b> – the term used for the administrative or clinical information on a
+							record (such as medical condition, income, educational attainment), as opposed to
+							identifying information (such as name and address).</li>
+						<li><b>Identifier</b> – for the purpose of data linking, an identifier is information that
+							establishes the identity of an individual or organisation. For example, for individuals it
+							is often name and address. Also see Unique identifier.</li>
+						<li><b>Unique identifier</b> – a number or code that uniquely identifies a person, business or
+							organisation, such as passport number or Australian Business Number (ABN).</li>
+					</ul>
+					<h1>Creating a linkage key</h1>
+					<p>A linkage key is a code created using a combination of identifying information on each record,
+						such as name, address and date of birth (see Table 1 for an example).
+					</p>
+					<p>The linkage key usually replaces identifiers on the linked record. If the records in the linked
+						dataset are de-identified (by removing name and address), this helps to protect the identity of
+						the people or organisations in the new dataset.
+					</p>
+					<p>However, this does not necessarily ensure privacy protection. Even without name and address it
+						may still be possible to recognise a person or organisation, through a set of unusual
+						characteristics in the linked dataset. For example, small-area data (e.g., a suburb) showing a
+						17-year-old widow with four children could be recognisable to someone living in that area.
+						Therefore, further confidentiality techniques need to be applied before releasing the data.
+					</p>
+					<p>The <a
+							href="http://toolkit.data.gov.au/index.php?title=Confidentiality_Series&amp;action=edit&amp;redlink=1"
+							class="new" title="Confidentiality Series (page does not exist)">Confidentiality Series</a>
+						provides more information on privacy and confidentiality.
+					</p>
+					<p>Table 1 shows how a 12 character key might be built using:
+					</p>
+					<ul>
+						<li>the second, third and fifth letters of a person’s last name, second and third letter from a
+							person’s first name</li>
+						<li>the second, fourth, sixth and seventh numbers from a person’s date of birth (DD/MM/YYYY)
+						</li>
+						<li>gender (male is 1 and female is 2)</li>
+						<li>the second and third numbers of the postcode.</li>
+					</ul>
+					<p><b>Table 1: Example of creating a linkage key</b>
+					</p>
+					<table>
+						<tbody>
+							<tr>
+								<th>Name</th>
+								<th>Date of birth</th>
+								<th>Gender</th>
+								<th>Postcode
+								</th>
+							</tr>
+							<tr>
+								<td>John Smith</td>
+								<td>12/05/1970</td>
+								<td>Male</td>
+								<td>5623
+								</td>
+							</tr>
+							<tr>
+								<td>Linkage key = MIHOH2597162
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p><br />
+						As with the unique identifier, if there is an error or missing information on the records, the
+						linkage key may not match exactly and therefore the records will not be linked.
+					</p>
+					<p>As linkage keys use identifiers in their creation, technically they could be reconstructed,
+						thereby identifying people in the dataset. Therefore, encryption of the key is recommended as an
+						additional safety measure to avoid the risk of identification or re-identification.
+					</p>
+					<h1>An example of deterministic linking using a linkage key</h1>
+					<p><b>Stage 1:</b> Assigning linkage keys to all records within datasets A and B.
+						This example uses a linkage key (based on Table 1) for a project looking at educational
+						attainment and earnings, by age and sex.
+					</p>
+					<p><b>Stage 2:</b> Extracting the content data and unique identifier.
+						In this example, the linkage key (MIHOH2597162) identifies the records that refer to the same
+						person, in this case John Smith.
+					</p>
+					<p><b>Stage 3:</b> Merging to create a linked record.
+						Using the linkage key, only the information required for the project (highest educational
+						attainment, income, sex and age) is extracted from each record and merged into a new linked
+						record (now known by the identifier MIHOH2597162) in the new dataset. (See Diagram 1)
+					</p>
+					<p><b>Diagram 1: A simple example of deterministic linking using a linkage key</b>
+					</p>
+					<p><img alt="Data Linking Sheet 3 - Diagram 1.jpeg"
+							src="/images/a/a5/Data_Linking_Sheet_3_-_Diagram_1.jpeg" width="1737" height="1124" />
+					</p>
+					<p><br />
+					</p>
+					<h2>For more information</h2>
+					<ul>
+						<li>Australian Institute of Health and Welfare and Australian Bureau of Statistics 2012, <i><a
+									rel="nofollow" class="external text"
+									href="http://www.aihw.gov.au/publication-detail/?id=10737422216">National best
+									practice guidelines for data linkage activities relating to Aboriginal and Torres
+									Strait Islander people</a></i>, AIHW Cat. no. IHW 74, AIHW, Canberra.</li>
+						<li>Australian Institute of Health and Welfare 2011, ‘<i><a rel="nofollow" class="external text"
+									href="http://www.aihw.gov.au/publication-detail/?id=10737418279">Comparing an
+									SLK-based and a name-based data linkage strategy: an investigation into the PIAC
+									linkage</a>]</i>’, Data linkage series, No. 11. Cat. no. CSI 11, AIHW, Canberra.
+						</li>
+						<li>Australian Institute of Health and Welfare: Karmel, R. 2005, ‘<i><a rel="nofollow"
+									class="external text"
+									href="http://www.aihw.gov.au/publication-detail/?id=6442467777">Data linkage
+									protocols using a statistical linkage key</a></i>’, Data linkage series, No. 1. Cat.
+							no. CSI 1, AIHW, Canberra.</li>
+						<li>Bass, J. and Garfield, C. 2002, ‘<i><a rel="nofollow" class="external text"
+									href="http://phidu.torrens.edu.au/publications-1999-to-2004/symposium-on-health-data-linkage-proceedings">Statistical
+									linkage keys: How effective are they?</a></i>’ Proceedings of Symposium on health
+							data linkage, Public Health Information Development Unit, held March 20-21 2002, Sydney, pp.
+							40-45.</li>
+						<li>National Statistical Service 2011, <a
+								href="http://toolkit.data.gov.au/index.php?title=Confidentiality_Information_Series&amp;action=edit&amp;redlink=1"
+								class="new"
+								title="Confidentiality Information Series (page does not exist)">Confidentiality
+								Information Series</a>, National Statistical Service, Canberra <a rel="nofollow"
+								class="external free" href="http://www.nss.gov.au">http://www.nss.gov.au</a></li>
+						<li>NCSIMG 2004, <i><a rel="nofollow" class="external text"
+									href="http://www.aihw.gov.au/publication-detail/?id=6442467611">Statistical Data
+									Linkage in Community Services Data Collection</a></i>, AIHW, Canberra.</li>
+					</ul>
+
+
+
+				</div>
+
+			</div>
+			<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+			<div class="visualClear"></div>
+		</div>
+	</div>
+	<div id="mw-navigation">
 		<h2>Navigation menu</h2>
 		<div id="mw-panel">
 			<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/" title="Visit the main page"></a></div>
 			<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
 				<h3 id="p-navigation-label">Navigation</h3>
 				<div class="body">
-					<ul>		
+					<ul>
 						<li class="mw-list-item"><a href="/">Main page</a></li>
-						<li class="mw-list-item"><a href="/Policy.html">Policy</a></li>	
-						<li class="mw-list-item"><a href="/Planning.html">Planning</a></li>	
-						<li class="mw-list-item"><a href="/Publishing_your_data.html">Publishing your data</a></li>	
-						<li class="mw-list-item"><a href="/How_to_use_data.gov.au.html" >Data.gov.au</a>
+						<li class="mw-list-item"><a href="/Policy.html">Policy</a></li>
+						<li class="mw-list-item"><a href="/Planning.html">Planning</a></li>
+						<li class="mw-list-item"><a href="/Publishing_your_data.html">Publishing your data</a></li>
+						<li class="mw-list-item"><a href="/How_to_use_data.gov.au.html">Data.gov.au</a>
 							<ul>
 								<li class="mw-list-item"><a href="/Introduction.html">Introduction</a></li>
-								<li class="mw-list-item"><a href="/Starting_on_datagovau.html">Starting on Data.gov.au</a></li>
+								<li class="mw-list-item"><a href="/Starting_on_datagovau.html">Starting on
+										Data.gov.au</a></li>
 								<li class="mw-list-item"><a href="/Publishing_Data.html">Publishing data</a></li>
 								<li class="mw-list-item"><a href="/Publishing_Data.html">Data</a></li>
 								<li class="mw-list-item"><a href="/Data.html">Discovering metadata</a></li>
 								<li class="mw-list-item"><a href="/Discovering_Metadata.html">Using data</a></li>
 								<li class="mw-list-item"><a href="/Site_Analytics.html">Site analytics</a></li>
-								<li class="mw-list-item"><a href="/Platform_Information.html">Platform information</a></li>		
+								<li class="mw-list-item"><a href="/Platform_Information.html">Platform information</a>
+								</li>
 							</ul>
-						</li>	
-						<li class="mw-list-item"><a href="/Statistical_Data_Integration.html">Statistical Data Integration</a></li>	
-						<li class="mw-list-item"><a href="https://data.gov.au/dataset/ds-dga-b942ba20-3504-402a-869b-01d9969a40ab/details">Public Register of Data Integration Projects</a></li>		
-						
+						</li>
+						<li class="mw-list-item"><a href="/Statistical_Data_Integration.html">Statistical Data
+								Integration</a></li>
+						<li class="mw-list-item"><a
+								href="https://data.gov.au/dataset/ds-dga-b942ba20-3504-402a-869b-01d9969a40ab/details">Public
+								Register of Data Integration Projects</a></li>
+
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-			</div></div><div id="footer" role="contentinfo">
+	</div>
+	</div>
+	<div id="footer" role="contentinfo">
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38578922-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38578922-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-38578922-3');
-</script>
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-						<ul id="footer-info">
-								<li id="footer-info-lastmod"> This page was last edited on 30 August 2018, at 03:28.</li>
-								<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
-							</ul>
+			gtag('config', 'UA-38578922-3');
+		</script>
 
-										<ul id="footer-icons" class="noprint">
-										<li id="footer-copyrightico">
-						<img src="/resources/assets/licenses/cc-by.png" alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and" width="88" height="31"/>					</li>
+		<ul id="footer-info">
+			<li id="footer-info-lastmod"> This page was last edited on 30 August 2018, at 03:28.</li>
+			<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia
+				licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
+		</ul>
 
-									</ul>
-						<div style="clear: both;"></div>
-		</div>
+		<ul id="footer-icons" class="noprint">
+			<li id="footer-copyrightico">
+				<img src="/resources/assets/licenses/cc-by.png"
+					alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and"
+					width="88" height="31" /> </li>
 
-	</body>
+		</ul>
+		<div style="clear: both;"></div>
+	</div>
+
+</body>
+
 </html>

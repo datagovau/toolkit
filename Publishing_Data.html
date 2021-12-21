@@ -1,490 +1,888 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
+
 <head>
-<meta charset="UTF-8"/>
-<title>Publishing Data - Data.gov.au</title>
-<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+	<meta charset="UTF-8" />
+	<title>Publishing Data - Data.gov.au</title>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace(/(^|\s)client-nojs(\s|$)/,
+			"$1client-js$2");
+	</script>
 
-<link rel="stylesheet" href="print.css"/>
-<script async="" src="site.js"></script>
-<meta name="google-site-verification" content="kajQGWxyqP9zf_uRRBX4nk0QxGRUDmzRnnbwkEBD_Yw" />
-<link rel="shortcut icon" href="http://toolkit.data.gov.au/favicon.ico"/>
-<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="print.css" />
+	<script async="" src="site.js"></script>
+	<meta name="google-site-verification" content="kajQGWxyqP9zf_uRRBX4nk0QxGRUDmzRnnbwkEBD_Yw" />
+	<link rel="shortcut icon" href="http://toolkit.data.gov.au/favicon.ico" />
+	<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
 </head>
-<body>		<div id="mw-page-base" class="noprint"></div>
-		<div id="mw-head-base" class="noprint"></div>
-		<div id="content" class="mw-body" role="main">
-			<a id="top"></a>
-			<div class="mw-indicators mw-body-content">
-</div>
-<h1 id="firstHeading" class="firstHeading" lang="en">Publishing Data</h1>			<div id="bodyContent" class="mw-body-content">
-				<div id="siteSub" class="noprint">From Data.gov.au</div>				<div id="contentSub"></div>
-								<div id="jump-to-nav" class="mw-jump">
-					Jump to:					<a href="Publishing_Data.html#mw-head">navigation</a>, 					<a href="Publishing_Data.html#p-search">search</a>
-				</div>
-				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
 
-<h1>Publishing Data</h1>
-<h2>Format</h2>
-<p>You must post tabular data in CSV if you want API access to be automatically generated for your dataset. The platform will host files of nearly any type, but it will only enable API or data visualisation for ‘clean’ CSV files. Finance also provides support for some geospatial data types including KML, and will advise on additional formats as they are supported.
-</p><p>However, you can publish any data file type, and Finance encourages entities to publish multiple formats where appropriate or useful to users.
-</p>
-<h3>Compressing a CSV into a ZIP</h3>
-<p>Compressing CSV's reduces the amount of time it takes to upload and download a file. This is particularly useful when a <b>CSV</b> has a large amount of data. 
-</p><p>For windows users:
-</p>
-<ol><li>Browse to the relevant <b>CSV</b></li>
-<li>Select the file you wish to compress</li>
-<li>Right click on the <b>CSV</b></li>
-<li>Hover over <b>“send to”</b></li>
-<li>Click "Compressed (zipped) file"</li></ol>
-<p>You will now have a <b>ZIP</b> file in the same folder as your original <b>CSV</b>
-</p>
-<ul><li>Please note that you should only compress one csv at a time if you are uploading it to data.gov.au.</li></ul>
-<p>To upload your newly created ZIP file follow the instructions on <a href="Publishing_Data.html#Manual_Publishing" title="Publishing Data">Manual Publishing</a>
-</p>
-<h2><span id="Supportive_documentation/context"></span>Supportive documentation/context</h2>
-<p>Publish any supportive documentation/caveats/contextual information in the text of the descriptive information about the data set.  If the information is extensive it can also be uploaded as a an additional resource to the dataset. <i>Please do not</i> put the data into the documentation itself, as it means the platform will treat it as just another file like a PDF rather than as a data file. This means the data is inaccessible to users and no API or data visualisation will be available for your dataset.
-</p>
-<h2>Automated Publishing</h2>
-<p>To automate your data uploads, you will need to either:
-</p>
-<ul><li>Have technical expertise in house to develop scripts that use the CKAN API;</li>
-<li>Use software such as FME (proprietary) or Kettle (open source) to extract data from your data sources, clean them and push appropriate data up to data.gov.au; or</li>
-<li>Pay a small amount to a services provider to create automation tools for you.</li></ul>
-<p>There are both push and pull methods for dataset updates. Documentation on the CKAN API is at <a rel="nofollow" class="external free" href="http://docs.ckan.org/en/943-writing-extensions-tutorial/api.html#example-importing-datasets-with-the-ckan-api">http://docs.ckan.org/en/943-writing-extensions-tutorial/api.html#example-importing-datasets-with-the-ckan-api</a>
-</p>
-<h3>Automating data harvest from your ArcGIS Open Data site</h3>
-<p>If you are making use of ArcGIS Online, you can also setup and expose your spatial data via an <a href="http://opendata.arcgis.com/">ArcGIS Open Data site</a>. Contact the data.gov.au team to arrange this connection. 
-<h3>Automating data transformation and uploading with Taverna</h3>
-<p>The data.gov.au team is still exploring this tool but it was strongly recommend by colleagues in the Western Australian Government for data workflows and automating data uploads.
-</p><p>Details at <a rel="nofollow" class="external free" href="http://www.taverna.org.uk/introduction/">http://www.taverna.org.uk/introduction/</a>
-</p>
-<h3>Automating CKAN data uploads using FME</h3>
-<p>An FME workbench has been developed to update existing datasets which have been previously published to data.gov.au utilising the CKAN API.
-</p><p>Before you start you will need: 
-</p>
-<ol><li>A unique API key - This is assigned to you once you have <a href="Starting_on_datagovau.html#Getting_an_Account" title="Starting on datagovau">set up an account</a> with data.gov.au.</li>
-<li><a href="Publishing_Data.html#Publishing_Data" title="Publishing Data">Publish your dataset</a> to your organisation.</li>
-<li>The dataset's URL. Example: <a rel="nofollow" class="external free" href="https://data.gov.au/api/rest/dataset/ballarat-planning-applications-currently-on-advertising">https://data.gov.au/api/rest/dataset/ballarat-planning-applications-currently-on-advertising</a></li>
-<li>Create a private parameter in the workbench with your API key. This is easier to use instead of copying and pasting your API key multiple times.</li></ol>
-<p>You can find a sample FME workbench (<i>created by <a rel="nofollow" class="external text" href="http://www.twitter.com/@mattswards">Matthew Swards</a> from <a rel="nofollow" class="external text" href="https://data.gov.au/organization/city-of-ballarat">City of Ballarat</a></i>) on the <a rel="nofollow" class="external text" href="https://github.com/datagovau/ckan-api-examples/tree/master/FME">datagovau github</a>
-</p>
-<h2>Manual Publishing</h2>
-<ol><li>Log in with an authenticated account</li>
-<li>Browse to Datasets (top menu)</li>
-<li>Click <b>Add Dataset</b> – Remember you may have multiple files in the one dataset</li>
-<li>On the first page you’ll be asked to complete fields to describe your data (the metadata).
-<ul><li><b>Title</b> (required): name of the dataset.</li>
-<li><b>Description</b>: descriptive information about the dataset can also include further information or caveats pertaining to the data. * For formatting you can use <a rel="nofollow" class="external text" href="http://daringfireball.net/projects/markdown/syntax">markdown</a>. Below you'll find a useful table of markdown you are likely to use on data.gov.au.</li>
-<li><b>Keywords</b>: some keywords (or tags) that describe your data.</li>
-<li><b>License</b> (required): a dropdown of available licenses for data.gov.au (<i><a rel="nofollow" class="external text" href="/Definitions.html#Licensing">the default is Creative Commons Attribution 3.0 Australia</a></i>)</li>
-<li><b>Organisation</b>: a dropdown of organisations you can publish to. Most users can only publish to a single organisation. This will be automatically filled in.</li>
-<li><b>Visibility</b>: whether the dataset will be viewable to all users once complete. The default is private.</li>
-<li><b>Geospatial Coverage</b> (required): inherited from organisation metadata this is the area which the data covers. It can be;
-<ul><li>a point/polygon (<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Well-known_text">Well-known text</a>);</li>
-<li>an administrative boundary API; or,</li>
-<li>a reference URL (website address) from the <a rel="nofollow" class="external text" href="http://www.ga.gov.au/place-names/">National Gazatteer</a>. Gazetteer reference URLs can be found by searching for a place at <a rel="nofollow" class="external free" href="http://www.ga.gov.au/place-names/">http://www.ga.gov.au/place-names/</a> then clicking through to the most appropriate location "Record ID", and then copying and pasting into the Geospatial field in data.gov.au.</li></ul></li>
-<li><b>Temporal Coverage From / To</b> (required): the span of time from/to which the data is applicable. If the data applies only to a single point in time you should only fill in the Temporal Coverage From field.</li>
-<li><b>Language</b>: the language in which the dataset is published. The default is English.</li>
-<li><b>Data Status</b> (required): the status of the data with regard to whether it is kept updated (active, yes) or historic (inactive, no).</li>
-<li><b>Update Frequency</b> (required):  how often the dataset is updated. Eg: Daily, Weekly, Never. (for remote machine readable files this field will be used to fetch new versions of this data)</li>
-<li><b>Expose User Contact Information</b>: display additional contact information for the dataset.</li>
-<li><b>AGIFT Function/Theme</b>: the <a rel="nofollow" class="external text" href="http://agift.naa.gov.au/">AGIFT</a> top level government function to which the dataset relates.</li>
-<li><b>Publisher</b>: name of entity/publishing organisation. The default is set to the organisation’s name.</li>
-<li><b>Jurisdiction</b>: name of the jurisdiction in which the dataset belongs. The default is set to the organisation’s jurisdiction.</li></ul></li>
-<li>Click <b>Next: Add Data</b></li>
-<li>Click <b>Upload</b> and select the file you wish to add to the dataset. Add a description for this file and add the (likely) 3 letter file extension to the Format field. You can add additional files to the dataset by clicking <b>Save and add another</b> and repeating the process. When finished adding resources click <b>Next: Additional Info</b>.</li>
-<li>You may choose to fill out the information on the <b>Additional Info page</b>.
-<ul><li><b>Geospatial Topic</b>: dropdown list this is the high level <a rel="nofollow" class="external text" href="https://www2.landgate.wa.gov.au/interragatorplus/help/index.html?iso_19115_topic_categories.htm">ISO19115</a> topic. Multiple topics can be selected.</li>
-<li><b>Data Models</b>: add any links to information on relevant data models, ontologies, taxonomies etc specific to your dataset. You can upload data models to the <a rel="nofollow" class="external text" href="https://data.gov.au/dataset/new_metadata/">data.gov.au data model repository</a>.</li>
-<li><b>Field of Research</b>: Australian and New Zealand Standard Research Classification (ANZSRC), 2008 defined <a rel="nofollow" class="external text" href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/0/6BB427AB9696C225CA2574180004463E?opendocument">field or fields of research</a> relevant to the dataset.</li></ul></li>
-<li>Click the <b>Finish</b> button.</li></ol>
-<table class="wikitable" style="width:80%; margin-left:auto; margin-right:auto">
-<tbody><tr>
-<th style="text-align: left;">Type
-</th>
-<th style="text-align: left;">Markdown formatting
-</th>
-<th style="text-align: left;">Result
-</th></tr>
-<tr>
-<td>Header Text
-</td>
-<td>### Heading
-</td>
-<td>&lt;h3&gt;Heading&lt;/h3&gt;
-</td></tr>
-<tr>
-<td>Italic text
-</td>
-<td>*Italic text*
-</td>
-<td><i>Italic text</i>
-</td></tr>
-<tr>
-<td>Bold text
-</td>
-<td>**Bold text**
-</td>
-<td><b>Bold text</b>
-</td></tr>
-<tr>
-<td>Link
-</td>
-<td>[data.gov.au](<a rel="nofollow" class="external free" href="http://www.data.gov.au">http://www.data.gov.au</a>)
-</td>
-<td><a rel="nofollow" class="external text" href="http://data.gov.au">data.gov.au</a>
-</td></tr>
-<tr>
-<td>Bullet list
-</td>
-<td>
-<p>*&#160;&#160;&#160;List Item<br />
-*&#160;&#160;&#160;List Item<br />
-*&#160;&#160;&#160;List Item<br />
-<i> <b>NB: </b>there are at least 3 spaces between the asterix and text.</i>
-</p>
-</td>
-<td>
-<ul><li>List Item</li>
-<li>List Item</li>
-<li>List Item</li></ul>
-</td></tr>
-<tr>
-<td>Numbered list
-</td>
-<td>
-<p>1.  List Item<br />
-2.  List Item<br />
-3.  List Item
-</p>
-</td>
-<td>
-<ol><li>List Item</li>
-<li>List Item</li>
-<li>List Item</li></ol>
-</td></tr></tbody></table>
-<h3>Manual Publishing Screenshots</h3>
-<ul class="gallery mw-gallery-nolines">
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/1/12/Manual-publishing-screenshots-1.jpg/97px-Manual-publishing-screenshots-1.jpg" width="97" height="120" srcset="/images/thumb/1/12/Manual-publishing-screenshots-1.jpg/146px-Manual-publishing-screenshots-1.jpg 1.5x, /images/thumb/1/12/Manual-publishing-screenshots-1.jpg/195px-Manual-publishing-screenshots-1.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Publishing a new dataset – Step 1 - Details about the set</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/c/c5/Manual-publishing-screenshots-2.jpg/250px-Manual-publishing-screenshots-2.jpg" width="250" height="111" srcset="/images/thumb/c/c5/Manual-publishing-screenshots-2.jpg/375px-Manual-publishing-screenshots-2.jpg 1.5x, /images/thumb/c/c5/Manual-publishing-screenshots-2.jpg/500px-Manual-publishing-screenshots-2.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Publishing a new dataset – Step 2 - Upload file(s) or a link to a data service</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/2/25/Manual-publishing-screenshots-3.jpg/239px-Manual-publishing-screenshots-3.jpg" width="239" height="120" srcset="/images/thumb/2/25/Manual-publishing-screenshots-3.jpg/359px-Manual-publishing-screenshots-3.jpg 1.5x, /images/thumb/2/25/Manual-publishing-screenshots-3.jpg/478px-Manual-publishing-screenshots-3.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Publishing a new dataset – Step 3 - Additional Information</b>
-</p>
-			</div>
-		</div></li>
-</ul>
-<h2 id="Updating_an_Existing_Dataset">Updating an Existing Dataset</h2>
-<p>Using the steps below you can change metadata and update or add additional resources (files) to the dataset.
-</p>
-<h3><span id="Updating_a_Dataset’s_Metadata"></span>Updating a Dataset’s Metadata</h3>
-<ol><li>Browse to the relevant dataset</li>
-<li>Click the <b>Manage</b> button located near top right of the page</li>
-<li>On the subsequent page the <a href="How_to_use_data.gov.au.html#Metadata" title="How to use data.gov.au">metadata associated</a> with a dataset can be updated
-<ol><li>Fields marked with <span style="color: red"> a red asterisk </span> are mandatory</li></ol></li>
-<li>Once finished click the <b>Update Dataset</b> button at the bottom of the page</li></ol>
-<h4><span id="Updating_a_Dataset’s_Metadata_Screenshots"></span>Updating a Dataset’s Metadata Screenshots</h4>
-<ul class="gallery mw-gallery-nolines">
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/8/8c/1.Updating_a_Dataset’s_Metadata_1.jpg/185px-1.Updating_a_Dataset’s_Metadata_1.jpg" width="185" height="120" srcset="/images/thumb/8/8c/1.Updating_a_Dataset’s_Metadata_1.jpg/277px-1.Updating_a_Dataset’s_Metadata_1.jpg 1.5x, /images/thumb/8/8c/1.Updating_a_Dataset’s_Metadata_1.jpg/369px-1.Updating_a_Dataset’s_Metadata_1.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Manage</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/8/88/1.Updating_a_Dataset’s_Metadata_2.jpg/160px-1.Updating_a_Dataset’s_Metadata_2.jpg" width="160" height="120" srcset="/images/thumb/8/88/1.Updating_a_Dataset’s_Metadata_2.jpg/240px-1.Updating_a_Dataset’s_Metadata_2.jpg 1.5x, /images/thumb/8/88/1.Updating_a_Dataset’s_Metadata_2.jpg/321px-1.Updating_a_Dataset’s_Metadata_2.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Edit Metadata</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/8/80/1.Updating_a_Dataset’s_Metadata_3.jpg/245px-1.Updating_a_Dataset’s_Metadata_3.jpg" width="245" height="120" srcset="/images/thumb/8/80/1.Updating_a_Dataset’s_Metadata_3.jpg/367px-1.Updating_a_Dataset’s_Metadata_3.jpg 1.5x, /images/thumb/8/80/1.Updating_a_Dataset’s_Metadata_3.jpg/489px-1.Updating_a_Dataset’s_Metadata_3.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Update Resource</b>
-</p>
-			</div>
-		</div></li>
-</ul>
-<h3>Adding Additional Resources to an Existing Dataset</h3>
-<ol><li>Browse to the relevant dataset</li>
-<li>Click the <b>Manage</b> button located on the near top right of the page</li>
-<li>Click the <b>Resources</b> link at the top of the page</li>
-<li>Click the <b>+ Add new resource</b> button</li>
-<li>If uploading a file click the <b>Upload</b> button</li>
-<li>If linking to an existing service, file or site click the <b>Link</b> button
-<ol><li>When linking to a file the user will be presented with an option to generate an API using the linked data. This option will only work with formats compatible with CKAN or Geoserver</li></ol></li>
-<li>Enter a <b>Name</b> for the resource</li>
-<li>If required enter a specific <b>Description</b> for the resource (<a href="How_to_use_data.gov.au.html#Useful_Markdown" title="How to use data.gov.au">markdown applies</a>)</li>
-<li>Enter a <b>Format</b> (filetype eg, csv, kml, shp…) for the resource
-<ol><li>data.gov.au will attempt to guess format of the file if the field is left blank</li>
-<li><b>Format</b> determines which visualisation will be automatically attached to the resource</li>
-<li>As of June 2015 additional visualisations can be added to a dataset</li></ol></li>
-<li>If left blank <b>Last Modified</b> will default to time of addition</li>
-<li>Click the <b>Add</b> button</li></ol>
-<h4><span id="Adding_Additional_Resources_to_an_Existing_Dataset_Screenshots_="></span>Adding Additional Resources to an Existing Dataset Screenshots =</h4>
-<ul class="gallery mw-gallery-nolines">
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/185px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg" width="185" height="120" srcset="/images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/278px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg 1.5x, /images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/370px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Manage Button</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/8/80/2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg/250px-2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg" width="250" height="89" srcset="/images/thumb/8/80/2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg/375px-2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg 1.5x, /images/thumb/8/80/2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg/500px-2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Resources link</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/2/21/2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg/250px-2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg" width="250" height="83" srcset="/images/thumb/2/21/2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg/375px-2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg 1.5x, /images/thumb/2/21/2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg/500px-2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>+ Add new resource</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg/186px-2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg" width="186" height="120" srcset="/images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg/278px-2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg 1.5x, /images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg/371px-2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Upload and Linking Buttons</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/6/64/2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg/158px-2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg" width="158" height="120" srcset="/images/thumb/6/64/2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg/237px-2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg 1.5x, /images/thumb/6/64/2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg/316px-2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>URL and API</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg/186px-2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg" width="186" height="120" srcset="/images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg/278px-2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg 1.5x, /images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg/371px-2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Add Resource</b>
-</p>
-			</div>
-		</div></li>
-</ul>
-<h3>Updating a Resource in an Existing Dataset</h3>
-<ol><li>Browse to the relevant dataset</li>
-<li>Click on the resource that requires an update</li>
-<li>Click the <b>Manage</b> button located on the near top right of the page</li>
-<li>Click the red <b>Remove</b> button to remove the current version of the resource</li>
-<li>If uploading an updated file click the <b>Upload</b> button</li>
-<li>If updating a link to an existing service, file or site click the <b>Link</b> button</li>
-<li>If required update the <b>Name</b></li>
-<li>If required update the <b>Description</b> (<a href="How_to_use_data.gov.au.html#Useful_Markdown" title="How to use data.gov.au">markdown applies</a>)</li>
-<li>If required update the <b>Format</b> (filetype eg, csv, kml, shp…)</li>
-<li>If left blank <b>Last Modified</b> will default to time of update</li>
-<li>Click the <b>Update Resource</b> button</li></ol>
-<h4>Updating a Resource in an Existing Dataset Screenshots</h4>
-<ul class="gallery mw-gallery-nolines">
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/8/80/3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg/232px-3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg" width="232" height="120" srcset="/images/thumb/8/80/3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg/347px-3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg 1.5x, /images/thumb/8/80/3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg/463px-3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>resource that requires an update</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/4/4a/3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg/250px-3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg" width="250" height="86" srcset="/images/thumb/4/4a/3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg/375px-3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg 1.5x, /images/thumb/4/4a/3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg/500px-3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Manage button</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/1/16/3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg/159px-3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg" width="159" height="120" srcset="/images/thumb/1/16/3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg/239px-3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg 1.5x, /images/thumb/1/16/3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg/318px-3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Red Remove button to remove the current version of the resource</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/8/85/3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg/157px-3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg" width="157" height="120" srcset="/images/thumb/8/85/3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg/235px-3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg 1.5x, /images/thumb/8/85/3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg/314px-3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Update Resource button</b>
-</p>
-			</div>
-		</div></li>
-</ul>
-<h3>Changing order in which Resources are Displayed</h3>
-<ol><li>Browse to the relevant dataset</li>
-<li>Click the <b>Manage</b> button located on the near top right of the page</li>
-<li>Click the <b>Resources</b> link at the top of the page</li>
-<li>Click the <b>Reorder resources</b> button</li>
-<li>Resources can now be reordered by dragging and dropping into a new position</li>
-<li>Once finished click the <b>Save order</b> button</li></ol>
-<h4>Changing order in which Resources are Displayed Screenshots</h4>
-<ul class="gallery mw-gallery-nolines">
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/185px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg" width="185" height="120" srcset="/images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/278px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg 1.5x, /images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/370px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Manage button</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/6/6d/4.Changing_order_in_which_Resources_are_Displayed_2.jpg/250px-4.Changing_order_in_which_Resources_are_Displayed_2.jpg" width="250" height="88" srcset="/images/thumb/6/6d/4.Changing_order_in_which_Resources_are_Displayed_2.jpg/375px-4.Changing_order_in_which_Resources_are_Displayed_2.jpg 1.5x, /images/thumb/6/6d/4.Changing_order_in_which_Resources_are_Displayed_2.jpg/500px-4.Changing_order_in_which_Resources_are_Displayed_2.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Resources link</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/0/0a/4.Changing_order_in_which_Resources_are_Displayed_3.jpg/250px-4.Changing_order_in_which_Resources_are_Displayed_3.jpg" width="250" height="111" srcset="/images/thumb/0/0a/4.Changing_order_in_which_Resources_are_Displayed_3.jpg/375px-4.Changing_order_in_which_Resources_are_Displayed_3.jpg 1.5x, /images/thumb/0/0a/4.Changing_order_in_which_Resources_are_Displayed_3.jpg/500px-4.Changing_order_in_which_Resources_are_Displayed_3.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Reorder resources button</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/5/57/4.Changing_order_in_which_Resources_are_Displayed_4.jpg/219px-4.Changing_order_in_which_Resources_are_Displayed_4.jpg" width="219" height="120" srcset="/images/thumb/5/57/4.Changing_order_in_which_Resources_are_Displayed_4.jpg/329px-4.Changing_order_in_which_Resources_are_Displayed_4.jpg 1.5x, /images/thumb/5/57/4.Changing_order_in_which_Resources_are_Displayed_4.jpg/438px-4.Changing_order_in_which_Resources_are_Displayed_4.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Reodering</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/6/6c/4.Changing_order_in_which_Resources_are_Displayed_5.jpg/250px-4.Changing_order_in_which_Resources_are_Displayed_5.jpg" width="250" height="109" srcset="/images/thumb/6/6c/4.Changing_order_in_which_Resources_are_Displayed_5.jpg/375px-4.Changing_order_in_which_Resources_are_Displayed_5.jpg 1.5x, /images/thumb/6/6c/4.Changing_order_in_which_Resources_are_Displayed_5.jpg/500px-4.Changing_order_in_which_Resources_are_Displayed_5.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Save order</b>
-</p>
-			</div>
-		</div></li>
-</ul>
-<h3>Deleting Resources from a Dataset</h3>
-<p>Deleting a resource will mean that is no longer available for use. If you are planning to remove a resource and replace with an updated version we recommend overwriting the resource. Updating a resource will mean its unique identifier will not change. 
-</p>
-<ol><li>Browse to the relevant dataset</li>
-<li>Click on the resource that is to be deleted</li>
-<li>Click the <b>Manage</b> button located on the near top right of the page</li>
-<li>Click the <b>Delete</b> button</li>
-<li>Click the <b>Confirm</b> button</li></ol>
-<h4>Deleting Resources from a Dataset Screenshots</h4>
-<ul class="gallery mw-gallery-nolines">
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/b/bc/5.Deleting_Resources_from_a_Dataset_1.jpg/232px-5.Deleting_Resources_from_a_Dataset_1.jpg" width="232" height="120" srcset="/images/thumb/b/bc/5.Deleting_Resources_from_a_Dataset_1.jpg/348px-5.Deleting_Resources_from_a_Dataset_1.jpg 1.5x, /images/thumb/b/bc/5.Deleting_Resources_from_a_Dataset_1.jpg/464px-5.Deleting_Resources_from_a_Dataset_1.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Click on the resource</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/e/e6/5.Deleting_Resources_from_a_Dataset_2.jpg/250px-5.Deleting_Resources_from_a_Dataset_2.jpg" width="250" height="85" srcset="/images/thumb/e/e6/5.Deleting_Resources_from_a_Dataset_2.jpg/375px-5.Deleting_Resources_from_a_Dataset_2.jpg 1.5x, /images/thumb/e/e6/5.Deleting_Resources_from_a_Dataset_2.jpg/500px-5.Deleting_Resources_from_a_Dataset_2.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Manage button</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/1/17/5.Deleting_Resources_from_a_Dataset_3.jpg/157px-5.Deleting_Resources_from_a_Dataset_3.jpg" width="157" height="120" srcset="/images/thumb/1/17/5.Deleting_Resources_from_a_Dataset_3.jpg/235px-5.Deleting_Resources_from_a_Dataset_3.jpg 1.5x, /images/thumb/1/17/5.Deleting_Resources_from_a_Dataset_3.jpg/313px-5.Deleting_Resources_from_a_Dataset_3.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Delete button</b>
-</p>
-			</div>
-		</div></li>
-		<li class="gallerybox" style="width: 255px"><div style="width: 255px">
-			<div class="thumb" style="width: 250px;"><div style="margin:0px auto;"><img alt="" src="/images/thumb/8/8e/5.Deleting_Resources_from_a_Dataset_4.jpg/158px-5.Deleting_Resources_from_a_Dataset_4.jpg" width="158" height="120" srcset="/images/thumb/8/8e/5.Deleting_Resources_from_a_Dataset_4.jpg/236px-5.Deleting_Resources_from_a_Dataset_4.jpg 1.5x, /images/thumb/8/8e/5.Deleting_Resources_from_a_Dataset_4.jpg/315px-5.Deleting_Resources_from_a_Dataset_4.jpg 2x" /></div></div>
-			<div class="gallerytext">
-<p><b>Confirm button</b>
-</p>
-			</div>
-		</div></li>
-</ul>
-<h3>A note on updating existing resources</h3>
-<p>If you wish to replace an existing resource with a new version ensure that whenever possible the new file continues to use the same structure for the document. Developers and others are able to access the resource via its unique identifier (eg: [<a rel="nofollow" class="external text" href="http://data.gov.au/dataset/disaster-events-with-category-impact-and-location/resource/ad5c6594-571e-4874-994c-a9f964d789df">ad5c6594-571e-4874-994c-a9f964d789df</a>]). If you overwrite a resource with a new file which is formatted differently or a different file type (replacing CSV with an XLS) you will run the risk of disrupting applications which utilise the resource.
-</p><p>If you plan to radically change the structure or format the data is delivered you should consider adding the new file as a different resource to the existing dataset. This will allow developers to continue to use the existing resource’s API while they make the necessary changes to their existing applications.
-</p>
-<h2>Dataset Comments</h2>
-<p>CKAN is integrated with Disqus for comment management. We have turned full moderation on for comments to allow entities the ability (and confidence) to manage and respond to comments in an appropriate and timely fashion.
-</p><p>The cloud based commenting system is Disqus and the moderation panel is at <a rel="nofollow" class="external free" href="http://datagovau.disqus.com/admin/moderate/#/approved">http://datagovau.disqus.com/admin/moderate/#/approved</a>
-</p><p>Entities need to request the username and password for moderating comments. data.gov.au administrators monitor comments on a daily basis.
-</p><p>Please find more information on CKAN commenting at <a rel="nofollow" class="external free" href="http://docs.ckan.org/en/ckan-1.7/commenting.html">http://docs.ckan.org/en/ckan-1.7/commenting.html</a>
-</p>
-
-
-</div>
-
-</div>					
-				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>				<div class="visualClear"></div>
-							</div>
+<body>
+	<div id="mw-page-base" class="noprint"></div>
+	<div id="mw-head-base" class="noprint"></div>
+	<div id="content" class="mw-body" role="main">
+		<a id="top"></a>
+		<div class="mw-indicators mw-body-content">
 		</div>
-		<div id="mw-navigation">
+		<h1 id="firstHeading" class="firstHeading" lang="en">Publishing Data</h1>
+		<div id="bodyContent" class="mw-body-content">
+			<div id="siteSub" class="noprint">From Data.gov.au</div>
+			<div id="contentSub"></div>
+			<div id="jump-to-nav" class="mw-jump">
+				Jump to: <a href="Publishing_Data.html#mw-head">navigation</a>, <a
+					href="Publishing_Data.html#p-search">search</a>
+			</div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+				<div class="mw-parser-output">
+
+					<h1>Publishing Data</h1>
+					<h2>Format</h2>
+					<p>You must post tabular data in CSV if you want API access to be automatically generated for your
+						dataset. The platform will host files of nearly any type, but it will only enable API or data
+						visualisation for ‘clean’ CSV files. Finance also provides support for some geospatial data
+						types including KML, and will advise on additional formats as they are supported.
+					</p>
+					<p>However, you can publish any data file type, and Finance encourages entities to publish multiple
+						formats where appropriate or useful to users.
+					</p>
+					<h3>Compressing a CSV into a ZIP</h3>
+					<p>Compressing CSV's reduces the amount of time it takes to upload and download a file. This is
+						particularly useful when a <b>CSV</b> has a large amount of data.
+					</p>
+					<p>For windows users:
+					</p>
+					<ol>
+						<li>Browse to the relevant <b>CSV</b></li>
+						<li>Select the file you wish to compress</li>
+						<li>Right click on the <b>CSV</b></li>
+						<li>Hover over <b>“send to”</b></li>
+						<li>Click "Compressed (zipped) file"</li>
+					</ol>
+					<p>You will now have a <b>ZIP</b> file in the same folder as your original <b>CSV</b>
+					</p>
+					<ul>
+						<li>Please note that you should only compress one csv at a time if you are uploading it to
+							data.gov.au.</li>
+					</ul>
+					<p>To upload your newly created ZIP file follow the instructions on <a
+							href="Publishing_Data.html#Manual_Publishing" title="Publishing Data">Manual Publishing</a>
+					</p>
+					<h2><span id="Supportive_documentation/context"></span>Supportive documentation/context</h2>
+					<p>Publish any supportive documentation/caveats/contextual information in the text of the
+						descriptive information about the data set. If the information is extensive it can also be
+						uploaded as a an additional resource to the dataset. <i>Please do not</i> put the data into the
+						documentation itself, as it means the platform will treat it as just another file like a PDF
+						rather than as a data file. This means the data is inaccessible to users and no API or data
+						visualisation will be available for your dataset.
+					</p>
+					<h2>Automated Publishing</h2>
+					<p>To automate your data uploads, you will need to either:
+					</p>
+					<ul>
+						<li>Have technical expertise in house to develop scripts that use the CKAN API;</li>
+						<li>Use software such as FME (proprietary) or Kettle (open source) to extract data from your
+							data sources, clean them and push appropriate data up to data.gov.au; or</li>
+						<li>Pay a small amount to a services provider to create automation tools for you.</li>
+					</ul>
+					<p>There are both push and pull methods for dataset updates. Documentation on the CKAN API is at <a
+							rel="nofollow" class="external free"
+							href="http://docs.ckan.org/en/943-writing-extensions-tutorial/api.html#example-importing-datasets-with-the-ckan-api">http://docs.ckan.org/en/943-writing-extensions-tutorial/api.html#example-importing-datasets-with-the-ckan-api</a>
+					</p>
+					<h3>Automating data harvest from your ArcGIS Open Data site</h3>
+					<p>If you are making use of ArcGIS Online, you can also setup and expose your spatial data via an <a
+							href="http://opendata.arcgis.com/">ArcGIS Open Data site</a>. Contact the data.gov.au team
+						to arrange this connection.
+						<h3>Automating data transformation and uploading with Taverna</h3>
+						<p>The data.gov.au team is still exploring this tool but it was strongly recommend by colleagues
+							in the Western Australian Government for data workflows and automating data uploads.
+						</p>
+						<p>Details at <a rel="nofollow" class="external free"
+								href="http://www.taverna.org.uk/introduction/">http://www.taverna.org.uk/introduction/</a>
+						</p>
+						<h3>Automating CKAN data uploads using FME</h3>
+						<p>An FME workbench has been developed to update existing datasets which have been previously
+							published to data.gov.au utilising the CKAN API.
+						</p>
+						<p>Before you start you will need:
+						</p>
+						<ol>
+							<li>A unique API key - This is assigned to you once you have <a
+									href="Starting_on_datagovau.html#Getting_an_Account"
+									title="Starting on datagovau">set up an account</a> with data.gov.au.</li>
+							<li><a href="Publishing_Data.html#Publishing_Data" title="Publishing Data">Publish your
+									dataset</a> to your organisation.</li>
+							<li>The dataset's URL. Example: <a rel="nofollow" class="external free"
+									href="https://data.gov.au/api/rest/dataset/ballarat-planning-applications-currently-on-advertising">https://data.gov.au/api/rest/dataset/ballarat-planning-applications-currently-on-advertising</a>
+							</li>
+							<li>Create a private parameter in the workbench with your API key. This is easier to use
+								instead of copying and pasting your API key multiple times.</li>
+						</ol>
+						<p>You can find a sample FME workbench (<i>created by <a rel="nofollow" class="external text"
+									href="http://www.twitter.com/@mattswards">Matthew Swards</a> from <a rel="nofollow"
+									class="external text" href="https://data.gov.au/organization/city-of-ballarat">City
+									of Ballarat</a></i>) on the <a rel="nofollow" class="external text"
+								href="https://github.com/datagovau/ckan-api-examples/tree/master/FME">datagovau
+								github</a>
+						</p>
+						<h2>Manual Publishing</h2>
+						<ol>
+							<li>Log in with an authenticated account</li>
+							<li>Browse to Datasets (top menu)</li>
+							<li>Click <b>Add Dataset</b> – Remember you may have multiple files in the one dataset</li>
+							<li>On the first page you’ll be asked to complete fields to describe your data (the
+								metadata).
+								<ul>
+									<li><b>Title</b> (required): name of the dataset.</li>
+									<li><b>Description</b>: descriptive information about the dataset can also include
+										further information or caveats pertaining to the data. * For formatting you can
+										use <a rel="nofollow" class="external text"
+											href="http://daringfireball.net/projects/markdown/syntax">markdown</a>.
+										Below you'll find a useful table of markdown you are likely to use on
+										data.gov.au.</li>
+									<li><b>Keywords</b>: some keywords (or tags) that describe your data.</li>
+									<li><b>License</b> (required): a dropdown of available licenses for data.gov.au
+										(<i><a rel="nofollow" class="external text"
+												href="/Definitions.html#Licensing">the default is Creative Commons
+												Attribution 3.0 Australia</a></i>)</li>
+									<li><b>Organisation</b>: a dropdown of organisations you can publish to. Most users
+										can only publish to a single organisation. This will be automatically filled in.
+									</li>
+									<li><b>Visibility</b>: whether the dataset will be viewable to all users once
+										complete. The default is private.</li>
+									<li><b>Geospatial Coverage</b> (required): inherited from organisation metadata this
+										is the area which the data covers. It can be;
+										<ul>
+											<li>a point/polygon (<a rel="nofollow" class="external text"
+													href="http://en.wikipedia.org/wiki/Well-known_text">Well-known
+													text</a>);</li>
+											<li>an administrative boundary API; or,</li>
+											<li>a reference URL (website address) from the <a rel="nofollow"
+													class="external text"
+													href="http://www.ga.gov.au/place-names/">National Gazatteer</a>.
+												Gazetteer reference URLs can be found by searching for a place at <a
+													rel="nofollow" class="external free"
+													href="http://www.ga.gov.au/place-names/">http://www.ga.gov.au/place-names/</a>
+												then clicking through to the most appropriate location "Record ID", and
+												then copying and pasting into the Geospatial field in data.gov.au.</li>
+										</ul>
+									</li>
+									<li><b>Temporal Coverage From / To</b> (required): the span of time from/to which
+										the data is applicable. If the data applies only to a single point in time you
+										should only fill in the Temporal Coverage From field.</li>
+									<li><b>Language</b>: the language in which the dataset is published. The default is
+										English.</li>
+									<li><b>Data Status</b> (required): the status of the data with regard to whether it
+										is kept updated (active, yes) or historic (inactive, no).</li>
+									<li><b>Update Frequency</b> (required): how often the dataset is updated. Eg: Daily,
+										Weekly, Never. (for remote machine readable files this field will be used to
+										fetch new versions of this data)</li>
+									<li><b>Expose User Contact Information</b>: display additional contact information
+										for the dataset.</li>
+									<li><b>AGIFT Function/Theme</b>: the <a rel="nofollow" class="external text"
+											href="http://agift.naa.gov.au/">AGIFT</a> top level government function to
+										which the dataset relates.</li>
+									<li><b>Publisher</b>: name of entity/publishing organisation. The default is set to
+										the organisation’s name.</li>
+									<li><b>Jurisdiction</b>: name of the jurisdiction in which the dataset belongs. The
+										default is set to the organisation’s jurisdiction.</li>
+								</ul>
+							</li>
+							<li>Click <b>Next: Add Data</b></li>
+							<li>Click <b>Upload</b> and select the file you wish to add to the dataset. Add a
+								description for this file and add the (likely) 3 letter file extension to the Format
+								field. You can add additional files to the dataset by clicking <b>Save and add
+									another</b> and repeating the process. When finished adding resources click <b>Next:
+									Additional Info</b>.</li>
+							<li>You may choose to fill out the information on the <b>Additional Info page</b>.
+								<ul>
+									<li><b>Geospatial Topic</b>: dropdown list this is the high level <a rel="nofollow"
+											class="external text"
+											href="https://www2.landgate.wa.gov.au/interragatorplus/help/index.html?iso_19115_topic_categories.htm">ISO19115</a>
+										topic. Multiple topics can be selected.</li>
+									<li><b>Data Models</b>: add any links to information on relevant data models,
+										ontologies, taxonomies etc specific to your dataset. You can upload data models
+										to the <a rel="nofollow" class="external text"
+											href="https://data.gov.au/dataset/new_metadata/">data.gov.au data model
+											repository</a>.</li>
+									<li><b>Field of Research</b>: Australian and New Zealand Standard Research
+										Classification (ANZSRC), 2008 defined <a rel="nofollow" class="external text"
+											href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/0/6BB427AB9696C225CA2574180004463E?opendocument">field
+											or fields of research</a> relevant to the dataset.</li>
+								</ul>
+							</li>
+							<li>Click the <b>Finish</b> button.</li>
+						</ol>
+						<table class="wikitable" style="width:80%; margin-left:auto; margin-right:auto">
+							<tbody>
+								<tr>
+									<th style="text-align: left;">Type
+									</th>
+									<th style="text-align: left;">Markdown formatting
+									</th>
+									<th style="text-align: left;">Result
+									</th>
+								</tr>
+								<tr>
+									<td>Header Text
+									</td>
+									<td>### Heading
+									</td>
+									<td>&lt;h3&gt;Heading&lt;/h3&gt;
+									</td>
+								</tr>
+								<tr>
+									<td>Italic text
+									</td>
+									<td>*Italic text*
+									</td>
+									<td><i>Italic text</i>
+									</td>
+								</tr>
+								<tr>
+									<td>Bold text
+									</td>
+									<td>**Bold text**
+									</td>
+									<td><b>Bold text</b>
+									</td>
+								</tr>
+								<tr>
+									<td>Link
+									</td>
+									<td>[data.gov.au](<a rel="nofollow" class="external free"
+											href="http://www.data.gov.au">http://www.data.gov.au</a>)
+									</td>
+									<td><a rel="nofollow" class="external text"
+											href="http://data.gov.au">data.gov.au</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Bullet list
+									</td>
+									<td>
+										<p>*&#160;&#160;&#160;List Item<br />
+											*&#160;&#160;&#160;List Item<br />
+											*&#160;&#160;&#160;List Item<br />
+											<i> <b>NB: </b>there are at least 3 spaces between the asterix and text.</i>
+										</p>
+									</td>
+									<td>
+										<ul>
+											<li>List Item</li>
+											<li>List Item</li>
+											<li>List Item</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>Numbered list
+									</td>
+									<td>
+										<p>1. List Item<br />
+											2. List Item<br />
+											3. List Item
+										</p>
+									</td>
+									<td>
+										<ol>
+											<li>List Item</li>
+											<li>List Item</li>
+											<li>List Item</li>
+										</ol>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h3>Manual Publishing Screenshots</h3>
+						<ul class="gallery mw-gallery-nolines">
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/1/12/Manual-publishing-screenshots-1.jpg/97px-Manual-publishing-screenshots-1.jpg"
+												width="97" height="120"
+												srcset="/images/thumb/1/12/Manual-publishing-screenshots-1.jpg/146px-Manual-publishing-screenshots-1.jpg 1.5x, /images/thumb/1/12/Manual-publishing-screenshots-1.jpg/195px-Manual-publishing-screenshots-1.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Publishing a new dataset – Step 1 - Details about the set</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/c/c5/Manual-publishing-screenshots-2.jpg/250px-Manual-publishing-screenshots-2.jpg"
+												width="250" height="111"
+												srcset="/images/thumb/c/c5/Manual-publishing-screenshots-2.jpg/375px-Manual-publishing-screenshots-2.jpg 1.5x, /images/thumb/c/c5/Manual-publishing-screenshots-2.jpg/500px-Manual-publishing-screenshots-2.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Publishing a new dataset – Step 2 - Upload file(s) or a link to a data
+												service</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/2/25/Manual-publishing-screenshots-3.jpg/239px-Manual-publishing-screenshots-3.jpg"
+												width="239" height="120"
+												srcset="/images/thumb/2/25/Manual-publishing-screenshots-3.jpg/359px-Manual-publishing-screenshots-3.jpg 1.5x, /images/thumb/2/25/Manual-publishing-screenshots-3.jpg/478px-Manual-publishing-screenshots-3.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Publishing a new dataset – Step 3 - Additional Information</b>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h2 id="Updating_an_Existing_Dataset">Updating an Existing Dataset</h2>
+						<p>Using the steps below you can change metadata and update or add additional resources (files)
+							to the dataset.
+						</p>
+						<h3><span id="Updating_a_Dataset’s_Metadata"></span>Updating a Dataset’s Metadata</h3>
+						<ol>
+							<li>Browse to the relevant dataset</li>
+							<li>Click the <b>Manage</b> button located near top right of the page</li>
+							<li>On the subsequent page the <a href="How_to_use_data.gov.au.html#Metadata"
+									title="How to use data.gov.au">metadata associated</a> with a dataset can be updated
+								<ol>
+									<li>Fields marked with <span style="color: red"> a red asterisk </span> are
+										mandatory</li>
+								</ol>
+							</li>
+							<li>Once finished click the <b>Update Dataset</b> button at the bottom of the page</li>
+						</ol>
+						<h4><span id="Updating_a_Dataset’s_Metadata_Screenshots"></span>Updating a Dataset’s Metadata
+							Screenshots</h4>
+						<ul class="gallery mw-gallery-nolines">
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/8/8c/1.Updating_a_Dataset’s_Metadata_1.jpg/185px-1.Updating_a_Dataset’s_Metadata_1.jpg"
+												width="185" height="120"
+												srcset="/images/thumb/8/8c/1.Updating_a_Dataset’s_Metadata_1.jpg/277px-1.Updating_a_Dataset’s_Metadata_1.jpg 1.5x, /images/thumb/8/8c/1.Updating_a_Dataset’s_Metadata_1.jpg/369px-1.Updating_a_Dataset’s_Metadata_1.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Manage</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/8/88/1.Updating_a_Dataset’s_Metadata_2.jpg/160px-1.Updating_a_Dataset’s_Metadata_2.jpg"
+												width="160" height="120"
+												srcset="/images/thumb/8/88/1.Updating_a_Dataset’s_Metadata_2.jpg/240px-1.Updating_a_Dataset’s_Metadata_2.jpg 1.5x, /images/thumb/8/88/1.Updating_a_Dataset’s_Metadata_2.jpg/321px-1.Updating_a_Dataset’s_Metadata_2.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Edit Metadata</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/8/80/1.Updating_a_Dataset’s_Metadata_3.jpg/245px-1.Updating_a_Dataset’s_Metadata_3.jpg"
+												width="245" height="120"
+												srcset="/images/thumb/8/80/1.Updating_a_Dataset’s_Metadata_3.jpg/367px-1.Updating_a_Dataset’s_Metadata_3.jpg 1.5x, /images/thumb/8/80/1.Updating_a_Dataset’s_Metadata_3.jpg/489px-1.Updating_a_Dataset’s_Metadata_3.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Update Resource</b>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h3>Adding Additional Resources to an Existing Dataset</h3>
+						<ol>
+							<li>Browse to the relevant dataset</li>
+							<li>Click the <b>Manage</b> button located on the near top right of the page</li>
+							<li>Click the <b>Resources</b> link at the top of the page</li>
+							<li>Click the <b>+ Add new resource</b> button</li>
+							<li>If uploading a file click the <b>Upload</b> button</li>
+							<li>If linking to an existing service, file or site click the <b>Link</b> button
+								<ol>
+									<li>When linking to a file the user will be presented with an option to generate an
+										API using the linked data. This option will only work with formats compatible
+										with CKAN or Geoserver</li>
+								</ol>
+							</li>
+							<li>Enter a <b>Name</b> for the resource</li>
+							<li>If required enter a specific <b>Description</b> for the resource (<a
+									href="How_to_use_data.gov.au.html#Useful_Markdown"
+									title="How to use data.gov.au">markdown applies</a>)</li>
+							<li>Enter a <b>Format</b> (filetype eg, csv, kml, shp…) for the resource
+								<ol>
+									<li>data.gov.au will attempt to guess format of the file if the field is left blank
+									</li>
+									<li><b>Format</b> determines which visualisation will be automatically attached to
+										the resource</li>
+									<li>As of June 2015 additional visualisations can be added to a dataset</li>
+								</ol>
+							</li>
+							<li>If left blank <b>Last Modified</b> will default to time of addition</li>
+							<li>Click the <b>Add</b> button</li>
+						</ol>
+						<h4><span id="Adding_Additional_Resources_to_an_Existing_Dataset_Screenshots_="></span>Adding
+							Additional Resources to an Existing Dataset Screenshots =</h4>
+						<ul class="gallery mw-gallery-nolines">
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/185px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg"
+												width="185" height="120"
+												srcset="/images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/278px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg 1.5x, /images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/370px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Manage Button</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/8/80/2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg/250px-2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg"
+												width="250" height="89"
+												srcset="/images/thumb/8/80/2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg/375px-2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg 1.5x, /images/thumb/8/80/2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg/500px-2.Adding_Additional_Resources_to_an_Existing_Dataset_2.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Resources link</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/2/21/2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg/250px-2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg"
+												width="250" height="83"
+												srcset="/images/thumb/2/21/2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg/375px-2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg 1.5x, /images/thumb/2/21/2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg/500px-2.Adding_Additional_Resources_to_an_Existing_Dataset_3.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>+ Add new resource</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg/186px-2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg"
+												width="186" height="120"
+												srcset="/images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg/278px-2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg 1.5x, /images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg/371px-2.Adding_Additional_Resources_to_an_Existing_Dataset_4.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Upload and Linking Buttons</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/6/64/2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg/158px-2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg"
+												width="158" height="120"
+												srcset="/images/thumb/6/64/2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg/237px-2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg 1.5x, /images/thumb/6/64/2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg/316px-2.Adding_Additional_Resources_to_an_Existing_Dataset_5.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>URL and API</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg/186px-2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg"
+												width="186" height="120"
+												srcset="/images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg/278px-2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg 1.5x, /images/thumb/c/c0/2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg/371px-2.Adding_Additional_Resources_to_an_Existing_Dataset_6.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Add Resource</b>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h3>Updating a Resource in an Existing Dataset</h3>
+						<ol>
+							<li>Browse to the relevant dataset</li>
+							<li>Click on the resource that requires an update</li>
+							<li>Click the <b>Manage</b> button located on the near top right of the page</li>
+							<li>Click the red <b>Remove</b> button to remove the current version of the resource</li>
+							<li>If uploading an updated file click the <b>Upload</b> button</li>
+							<li>If updating a link to an existing service, file or site click the <b>Link</b> button
+							</li>
+							<li>If required update the <b>Name</b></li>
+							<li>If required update the <b>Description</b> (<a
+									href="How_to_use_data.gov.au.html#Useful_Markdown"
+									title="How to use data.gov.au">markdown applies</a>)</li>
+							<li>If required update the <b>Format</b> (filetype eg, csv, kml, shp…)</li>
+							<li>If left blank <b>Last Modified</b> will default to time of update</li>
+							<li>Click the <b>Update Resource</b> button</li>
+						</ol>
+						<h4>Updating a Resource in an Existing Dataset Screenshots</h4>
+						<ul class="gallery mw-gallery-nolines">
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/8/80/3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg/232px-3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg"
+												width="232" height="120"
+												srcset="/images/thumb/8/80/3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg/347px-3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg 1.5x, /images/thumb/8/80/3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg/463px-3.Updating_a_Resource_in_an_Existing_Dataset_1.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>resource that requires an update</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/4/4a/3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg/250px-3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg"
+												width="250" height="86"
+												srcset="/images/thumb/4/4a/3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg/375px-3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg 1.5x, /images/thumb/4/4a/3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg/500px-3.Updating_a_Resource_in_an_Existing_Dataset_2.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Manage button</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/1/16/3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg/159px-3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg"
+												width="159" height="120"
+												srcset="/images/thumb/1/16/3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg/239px-3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg 1.5x, /images/thumb/1/16/3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg/318px-3.Updating_a_Resource_in_an_Existing_Dataset_3.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Red Remove button to remove the current version of the resource</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/8/85/3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg/157px-3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg"
+												width="157" height="120"
+												srcset="/images/thumb/8/85/3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg/235px-3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg 1.5x, /images/thumb/8/85/3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg/314px-3.Updating_a_Resource_in_an_Existing_Dataset_4.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Update Resource button</b>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h3>Changing order in which Resources are Displayed</h3>
+						<ol>
+							<li>Browse to the relevant dataset</li>
+							<li>Click the <b>Manage</b> button located on the near top right of the page</li>
+							<li>Click the <b>Resources</b> link at the top of the page</li>
+							<li>Click the <b>Reorder resources</b> button</li>
+							<li>Resources can now be reordered by dragging and dropping into a new position</li>
+							<li>Once finished click the <b>Save order</b> button</li>
+						</ol>
+						<h4>Changing order in which Resources are Displayed Screenshots</h4>
+						<ul class="gallery mw-gallery-nolines">
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/185px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg"
+												width="185" height="120"
+												srcset="/images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/278px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg 1.5x, /images/thumb/9/9b/2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg/370px-2.Adding_Additional_Resources_to_an_Existing_Dataset_1.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Manage button</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/6/6d/4.Changing_order_in_which_Resources_are_Displayed_2.jpg/250px-4.Changing_order_in_which_Resources_are_Displayed_2.jpg"
+												width="250" height="88"
+												srcset="/images/thumb/6/6d/4.Changing_order_in_which_Resources_are_Displayed_2.jpg/375px-4.Changing_order_in_which_Resources_are_Displayed_2.jpg 1.5x, /images/thumb/6/6d/4.Changing_order_in_which_Resources_are_Displayed_2.jpg/500px-4.Changing_order_in_which_Resources_are_Displayed_2.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Resources link</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/0/0a/4.Changing_order_in_which_Resources_are_Displayed_3.jpg/250px-4.Changing_order_in_which_Resources_are_Displayed_3.jpg"
+												width="250" height="111"
+												srcset="/images/thumb/0/0a/4.Changing_order_in_which_Resources_are_Displayed_3.jpg/375px-4.Changing_order_in_which_Resources_are_Displayed_3.jpg 1.5x, /images/thumb/0/0a/4.Changing_order_in_which_Resources_are_Displayed_3.jpg/500px-4.Changing_order_in_which_Resources_are_Displayed_3.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Reorder resources button</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/5/57/4.Changing_order_in_which_Resources_are_Displayed_4.jpg/219px-4.Changing_order_in_which_Resources_are_Displayed_4.jpg"
+												width="219" height="120"
+												srcset="/images/thumb/5/57/4.Changing_order_in_which_Resources_are_Displayed_4.jpg/329px-4.Changing_order_in_which_Resources_are_Displayed_4.jpg 1.5x, /images/thumb/5/57/4.Changing_order_in_which_Resources_are_Displayed_4.jpg/438px-4.Changing_order_in_which_Resources_are_Displayed_4.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Reodering</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/6/6c/4.Changing_order_in_which_Resources_are_Displayed_5.jpg/250px-4.Changing_order_in_which_Resources_are_Displayed_5.jpg"
+												width="250" height="109"
+												srcset="/images/thumb/6/6c/4.Changing_order_in_which_Resources_are_Displayed_5.jpg/375px-4.Changing_order_in_which_Resources_are_Displayed_5.jpg 1.5x, /images/thumb/6/6c/4.Changing_order_in_which_Resources_are_Displayed_5.jpg/500px-4.Changing_order_in_which_Resources_are_Displayed_5.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Save order</b>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h3>Deleting Resources from a Dataset</h3>
+						<p>Deleting a resource will mean that is no longer available for use. If you are planning to
+							remove a resource and replace with an updated version we recommend overwriting the resource.
+							Updating a resource will mean its unique identifier will not change.
+						</p>
+						<ol>
+							<li>Browse to the relevant dataset</li>
+							<li>Click on the resource that is to be deleted</li>
+							<li>Click the <b>Manage</b> button located on the near top right of the page</li>
+							<li>Click the <b>Delete</b> button</li>
+							<li>Click the <b>Confirm</b> button</li>
+						</ol>
+						<h4>Deleting Resources from a Dataset Screenshots</h4>
+						<ul class="gallery mw-gallery-nolines">
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/b/bc/5.Deleting_Resources_from_a_Dataset_1.jpg/232px-5.Deleting_Resources_from_a_Dataset_1.jpg"
+												width="232" height="120"
+												srcset="/images/thumb/b/bc/5.Deleting_Resources_from_a_Dataset_1.jpg/348px-5.Deleting_Resources_from_a_Dataset_1.jpg 1.5x, /images/thumb/b/bc/5.Deleting_Resources_from_a_Dataset_1.jpg/464px-5.Deleting_Resources_from_a_Dataset_1.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Click on the resource</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/e/e6/5.Deleting_Resources_from_a_Dataset_2.jpg/250px-5.Deleting_Resources_from_a_Dataset_2.jpg"
+												width="250" height="85"
+												srcset="/images/thumb/e/e6/5.Deleting_Resources_from_a_Dataset_2.jpg/375px-5.Deleting_Resources_from_a_Dataset_2.jpg 1.5x, /images/thumb/e/e6/5.Deleting_Resources_from_a_Dataset_2.jpg/500px-5.Deleting_Resources_from_a_Dataset_2.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Manage button</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/1/17/5.Deleting_Resources_from_a_Dataset_3.jpg/157px-5.Deleting_Resources_from_a_Dataset_3.jpg"
+												width="157" height="120"
+												srcset="/images/thumb/1/17/5.Deleting_Resources_from_a_Dataset_3.jpg/235px-5.Deleting_Resources_from_a_Dataset_3.jpg 1.5x, /images/thumb/1/17/5.Deleting_Resources_from_a_Dataset_3.jpg/313px-5.Deleting_Resources_from_a_Dataset_3.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Delete button</b>
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="gallerybox" style="width: 255px">
+								<div style="width: 255px">
+									<div class="thumb" style="width: 250px;">
+										<div style="margin:0px auto;"><img alt=""
+												src="/images/thumb/8/8e/5.Deleting_Resources_from_a_Dataset_4.jpg/158px-5.Deleting_Resources_from_a_Dataset_4.jpg"
+												width="158" height="120"
+												srcset="/images/thumb/8/8e/5.Deleting_Resources_from_a_Dataset_4.jpg/236px-5.Deleting_Resources_from_a_Dataset_4.jpg 1.5x, /images/thumb/8/8e/5.Deleting_Resources_from_a_Dataset_4.jpg/315px-5.Deleting_Resources_from_a_Dataset_4.jpg 2x" />
+										</div>
+									</div>
+									<div class="gallerytext">
+										<p><b>Confirm button</b>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h3>A note on updating existing resources</h3>
+						<p>If you wish to replace an existing resource with a new version ensure that whenever possible
+							the new file continues to use the same structure for the document. Developers and others are
+							able to access the resource via its unique identifier (eg: [<a rel="nofollow"
+								class="external text"
+								href="http://data.gov.au/dataset/disaster-events-with-category-impact-and-location/resource/ad5c6594-571e-4874-994c-a9f964d789df">ad5c6594-571e-4874-994c-a9f964d789df</a>]).
+							If you overwrite a resource with a new file which is formatted differently or a different
+							file type (replacing CSV with an XLS) you will run the risk of disrupting applications which
+							utilise the resource.
+						</p>
+						<p>If you plan to radically change the structure or format the data is delivered you should
+							consider adding the new file as a different resource to the existing dataset. This will
+							allow developers to continue to use the existing resource’s API while they make the
+							necessary changes to their existing applications.
+						</p>
+						<h2>Dataset Comments</h2>
+						<p>CKAN is integrated with Disqus for comment management. We have turned full moderation on for
+							comments to allow entities the ability (and confidence) to manage and respond to comments in
+							an appropriate and timely fashion.
+						</p>
+						<p>The cloud based commenting system is Disqus and the moderation panel is at <a rel="nofollow"
+								class="external free"
+								href="http://datagovau.disqus.com/admin/moderate/#/approved">http://datagovau.disqus.com/admin/moderate/#/approved</a>
+						</p>
+						<p>Entities need to request the username and password for moderating comments. data.gov.au
+							administrators monitor comments on a daily basis.
+						</p>
+						<p>Please find more information on CKAN commenting at <a rel="nofollow" class="external free"
+								href="http://docs.ckan.org/en/ckan-1.7/commenting.html">http://docs.ckan.org/en/ckan-1.7/commenting.html</a>
+						</p>
+
+
+				</div>
+
+			</div>
+			<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+			<div class="visualClear"></div>
+		</div>
+	</div>
+	<div id="mw-navigation">
 		<h2>Navigation menu</h2>
 		<div id="mw-panel">
 			<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/" title="Visit the main page"></a></div>
 			<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
 				<h3 id="p-navigation-label">Navigation</h3>
 				<div class="body">
-					<ul>		
+					<ul>
 						<li class="mw-list-item"><a href="/">Main page</a></li>
-						<li class="mw-list-item"><a href="/Policy.html">Policy</a></li>	
-						<li class="mw-list-item"><a href="/Planning.html">Planning</a></li>	
-						<li class="mw-list-item"><a href="/Publishing_your_data.html">Publishing your data</a></li>	
-						<li class="mw-list-item"><a href="/How_to_use_data.gov.au.html" >Data.gov.au</a>
+						<li class="mw-list-item"><a href="/Policy.html">Policy</a></li>
+						<li class="mw-list-item"><a href="/Planning.html">Planning</a></li>
+						<li class="mw-list-item"><a href="/Publishing_your_data.html">Publishing your data</a></li>
+						<li class="mw-list-item"><a href="/How_to_use_data.gov.au.html">Data.gov.au</a>
 							<ul>
 								<li class="mw-list-item"><a href="/Introduction.html">Introduction</a></li>
-								<li class="mw-list-item"><a href="/Starting_on_datagovau.html">Starting on Data.gov.au</a></li>
+								<li class="mw-list-item"><a href="/Starting_on_datagovau.html">Starting on
+										Data.gov.au</a></li>
 								<li class="mw-list-item"><a href="/Publishing_Data.html">Publishing data</a></li>
 								<li class="mw-list-item"><a href="/Publishing_Data.html">Data</a></li>
 								<li class="mw-list-item"><a href="/Data.html">Discovering metadata</a></li>
 								<li class="mw-list-item"><a href="/Discovering_Metadata.html">Using data</a></li>
 								<li class="mw-list-item"><a href="/Site_Analytics.html">Site analytics</a></li>
-								<li class="mw-list-item"><a href="/Platform_Information.html">Platform information</a></li>		
+								<li class="mw-list-item"><a href="/Platform_Information.html">Platform information</a>
+								</li>
 							</ul>
-						</li>	
-						<li class="mw-list-item"><a href="/Statistical_Data_Integration.html">Statistical Data Integration</a></li>	
-						<li class="mw-list-item"><a href="https://data.gov.au/dataset/ds-dga-b942ba20-3504-402a-869b-01d9969a40ab/details">Public Register of Data Integration Projects</a></li>		
-						
+						</li>
+						<li class="mw-list-item"><a href="/Statistical_Data_Integration.html">Statistical Data
+								Integration</a></li>
+						<li class="mw-list-item"><a
+								href="https://data.gov.au/dataset/ds-dga-b942ba20-3504-402a-869b-01d9969a40ab/details">Public
+								Register of Data Integration Projects</a></li>
+
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-			</div></div><div id="footer" role="contentinfo">
+	</div>
+	</div>
+	<div id="footer" role="contentinfo">
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38578922-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38578922-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-38578922-3');
-</script>
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-						<ul id="footer-info">
-								<li id="footer-info-lastmod"> This page was last edited on 26 September 2018, at 06:13.</li>
-								<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
-							</ul>
-						
-										<ul id="footer-icons" class="noprint">
-										<li id="footer-copyrightico">
-						<img src="/resources/assets/licenses/cc-by.png" alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and" width="88" height="31"/>					</li>
-										
-									</ul>
-						<div style="clear: both;"></div>
-		</div>
-		
-	</body>
+			gtag('config', 'UA-38578922-3');
+		</script>
+
+		<ul id="footer-info">
+			<li id="footer-info-lastmod"> This page was last edited on 26 September 2018, at 06:13.</li>
+			<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia
+				licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
+		</ul>
+
+		<ul id="footer-icons" class="noprint">
+			<li id="footer-copyrightico">
+				<img src="/resources/assets/licenses/cc-by.png"
+					alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and"
+					width="88" height="31" /> </li>
+
+		</ul>
+		<div style="clear: both;"></div>
+	</div>
+
+</body>
+
 </html>
