@@ -1,125 +1,244 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
+
 <head>
-<meta charset="UTF-8"/>
-<title>Confidentiality - Managing identification risks - Data.gov.au</title>
-<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
-<link rel="stylesheet" href="style.css"/>
-<script async="" src="site.js"></script>
-<meta name="google-site-verification" content="kajQGWxyqP9zf_uRRBX4nk0QxGRUDmzRnnbwkEBD_Yw" />
-<link rel="shortcut icon" href="http://toolkit.data.gov.au/favicon.ico"/>
-<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
+	<meta charset="UTF-8" />
+	<title>Confidentiality - Managing identification risks - Data.gov.au</title>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace(/(^|\s)client-nojs(\s|$)/,
+			"$1client-js$2");
+	</script>
+	<link rel="stylesheet" href="style.css" />
+	<script async="" src="site.js"></script>
+	<meta name="google-site-verification" content="kajQGWxyqP9zf_uRRBX4nk0QxGRUDmzRnnbwkEBD_Yw" />
+	<link rel="shortcut icon" href="http://toolkit.data.gov.au/favicon.ico" />
+	<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
 </head>
-<body>		<div id="mw-page-base" class="noprint"></div>
-		<div id="mw-head-base" class="noprint"></div>
-		<div id="content" class="mw-body" role="main">
-			<a id="top"></a>
-			<div class="mw-indicators mw-body-content">
-</div>
-<h1 id="firstHeading" class="firstHeading" lang="en">Confidentiality - Managing identification risks</h1>			<div id="bodyContent" class="mw-body-content">
-				<div id="siteSub" class="noprint">From Data.gov.au</div>				<div id="contentSub"></div>
-								<div id="jump-to-nav" class="mw-jump">
-					Jump to:					<a href="Confidentiality_-_Managing_identification_risks.html#mw-head">navigation</a>, 					<a href="Confidentiality_-_Managing_identification_risks.html#p-search">search</a>
+
+<body>
+	<div id="mw-page-base" class="noprint"></div>
+	<div id="mw-head-base" class="noprint"></div>
+	<div id="content" class="mw-body" role="main">
+		<a id="top"></a>
+		<div class="mw-indicators mw-body-content">
+		</div>
+		<h1 id="firstHeading" class="firstHeading" lang="en">Confidentiality - Managing identification risks</h1>
+		<div id="bodyContent" class="mw-body-content">
+			<div id="siteSub" class="noprint">From Data.gov.au</div>
+			<div id="contentSub"></div>
+			<div id="jump-to-nav" class="mw-jump">
+				Jump to: <a href="Confidentiality_-_Managing_identification_risks.html#mw-head">navigation</a>, <a
+					href="Confidentiality_-_Managing_identification_risks.html#p-search">search</a>
+			</div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+				<div class="mw-parser-output">
+
+					<h1>Confidentiality series</h1>
+					<ul>
+						<li><a href="Confidentiality_-_What_is_it_and_why_is_it_important.html"
+								title="Confidentiality - What is it and why is it important">Confidentiality - What is
+								it and why is it important</a></li>
+						<li><a href="Confidentiality_-_The_obligation_to_protect_identity_and_privacy.html"
+								title="Confidentiality - The obligation to protect identity and privacy">Confidentiality
+								- The obligation to protect identity and privacy</a></li>
+						<li><a class="mw-selflink selflink">Confidentiality - Managing identification risks</a></li>
+						<li><a href="Confidentiality_-_How_to_confidentialise_data_the_basic_principles.html"
+								title="Confidentiality - How to confidentialise data the basic principles">Confidentiality
+								- How to confidentialise data the basic principles</a></li>
+						<li><a href="Confidentiality_-_Managing_the_risk_of_disclosure_in_the_release_of_microdata.html"
+								title="Confidentiality - Managing the risk of disclosure in the release of microdata">Confidentiality
+								- Managing the risk of disclosure in the release of microdata</a></li>
+						<li><a href="Confidentiality_-_How_confidentiality_affects_research.html"
+								title="Confidentiality - How confidentiality affects research">Confidentiality - How
+								confidentiality affects research</a></li>
+						<li><a href="Confidentiality_-_Glossary.html" title="Confidentiality - Glossary">Confidentiality
+								- Glossary</a></li>
+					</ul>
+					<p><br />
+					</p>
+					<blockquote>
+						<p>Confidentiality, and therefore trust, can be broken when a person or an organisation can be
+							identified in a disseminated dataset, either directly or indirectly.</p>
+					</blockquote>
+					<p>One of the biggest challenges in making data publicly available is ensuring that no person or
+						organisation is likely to be identified in the data.
+					</p>
+					<p>Identification (often referred to as disclosure) occurs when someone learns something that they
+						did not already know about another person or organisation through data that has been
+						disseminated. This may be in the form of aggregate data (typically data presented in tables) or
+						microdata (unit record data where each record represents observations for a person or an
+						organisation).
+					</p>
+					<h1>Definitions</h1>
+					<p><b>Microdata</b> are unit record data containing individual responses to questions on survey
+						questionnaires, or administrative forms. For example, data in response to the question ‘In what
+						year were you born?’.
+					</p>
+					<p><b>Aggregate data</b> (or macrodata) refers to aggregated microdata. For example, a count of the
+						number of people of a particular age (obtained from the question ‘In what year were you born?’).
+					</p>
+					<p><br />
+					</p>
+					<h1><span id="Managing_the_risk_of_identification_(disclosure_control)"></span>Managing the risk of
+						identification (disclosure control)</h1>
+					<p>The process for managing the risk of identification is the same for any data that are
+						disseminated, whether it is aggregate data or microdata. The first step is to assess potential
+						identification risks. The second step is to manage the risks of identification by using an
+						appropriate method to confidentialise the data.
+					</p>
+					<p>The key elements in the process of managing the risk of identification are outlined in the
+						following diagram.
+					</p>
+					<h2>A process for managing identification risk</h2>
+					<ol>
+						<li>Understand the legal and ethical obligations to protect the confidentiality of data. For
+							more detail see Information sheets 1 and 2</li>
+						<li>Establish policies and procedures to meet confidentiality obligations. For more detail see
+							Information sheets 3, 4 and 5</li>
+						<li>De-identify the data (remove any direct identifiers from the dataset)</li>
+						<li>Assess potential identification risks by evaluating the factors that contribute to the
+							likelihood of identification. For more detail see Information sheets 3, 4 and 5</li>
+						<li>Test and evaluate to mitigate risk</li>
+						<li>Manage the risks of identification - confidentialise. For more detail see Information sheets
+							3, 4 and 5</li>
+						<li>Provide safe access to data. For more detail see Information sheet 5</li>
+					</ol>
+					<h1>Assessment of potential identification risks</h1>
+					<p>The likelihood of a person or an organisation being identified, and the confidentiality methods
+						used to minimise the risk of identification, will vary depending on a range of factors
+						including:
+					</p>
+					<ul>
+						<li>the amount of detail included in the data (the more detail, the higher the risk of
+							identification);</li>
+						<li>the sensitivity of the variables within the data (data items such as financial, health and
+							medical or criminal record information may increase the risk of identification and would
+							cause serious public concern if disclosed); and</li>
+						<li>how the information is presented (aggregate data released in tables poses less risk of
+							identification than the release of microdata).</li>
+					</ul>
+					<h1>Confidentialisation to manage potential identification risk</h1>
+					<p>The objective of confidentialisation is to meet legal and ethical obligations to protect the
+						identity and privacy of individuals and organisations, while at the same time maximising the
+						usefulness of the data for statistical and research purposes. While confidentialisation can be
+						used to manage the risk of identification, it may not completely eliminate the risk.
+					</p>
+					<p>There are two general methods (often referred to as statistical disclosure control methods) used
+						to confidentialise data that are to be disseminated:
+					</p>
+					<ul>
+						<li>data modification methods (perturbation) which involve changing the data slightly to reduce
+							the risk of disclosure, while retaining as much content and structure as possible; and</li>
+						<li>data reduction methods which aim to control or limit the amount of detail available, without
+							compromising the overall usefulness of the information available for research.</li>
+					</ul>
+					<p><br />
+						The techniques used to confidentialise data are similar for both aggregate data and microdata.
+						However, the way in which the risks are assessed and the confidentiality techniques which are
+						applied are different:
+					</p>
+					<ul>
+						<li>for aggregate data, the techniques are applied to cells in a table identified as unsafe,
+							after aggregation; and</li>
+						<li>for microdata, the techniques are applied to data items within individual unit records, or
+							to individual unit records, identified as unsafe before aggregation or analysis.</li>
+					</ul>
+					<p><br />
+						This information sheet provides a broad overview of the process involved in managing the risks
+						of identification. More detailed information is given in the subsequent information sheets in
+						this series.
+					</p>
+					<p><a href="Confidentiality_-_How_to_confidentialise_data_the_basic_principles.html"
+							title="Confidentiality - How to confidentialise data the basic principles">Information Sheet
+							4: ‘How to confidentialise data: the basic principles’</a> focuses on the risk assessment
+						that applies to aggregate data presented in tables, and the popular confidentiality techniques
+						that apply to both aggregate and microdata.
+					</p>
+					<p><a href="Confidentiality_-_Managing_the_risk_of_disclosure_in_the_release_of_microdata.html"
+							title="Confidentiality - Managing the risk of disclosure in the release of microdata">Information
+							Sheet 5: ‘Managing the risk of disclosure in the release of microdata’</a> focuses on the
+						risk assessment and confidentiality considerations that apply to microdata.
+					</p>
+
+
 				</div>
-				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
 
-<h1>Confidentiality series</h1>
-<ul><li><a href="Confidentiality_-_What_is_it_and_why_is_it_important.html" title="Confidentiality - What is it and why is it important">Confidentiality - What is it and why is it important</a></li>
-<li><a href="Confidentiality_-_The_obligation_to_protect_identity_and_privacy.html" title="Confidentiality - The obligation to protect identity and privacy">Confidentiality - The obligation to protect identity and privacy</a></li>
-<li><a class="mw-selflink selflink">Confidentiality - Managing identification risks</a></li>
-<li><a href="Confidentiality_-_How_to_confidentialise_data_the_basic_principles.html" title="Confidentiality - How to confidentialise data the basic principles">Confidentiality - How to confidentialise data the basic principles</a></li>
-<li><a href="Confidentiality_-_Managing_the_risk_of_disclosure_in_the_release_of_microdata.html" title="Confidentiality - Managing the risk of disclosure in the release of microdata">Confidentiality - Managing the risk of disclosure in the release of microdata</a></li>
-<li><a href="Confidentiality_-_How_confidentiality_affects_research.html" title="Confidentiality - How confidentiality affects research">Confidentiality - How confidentiality affects research</a></li>
-<li><a href="Confidentiality_-_Glossary.html" title="Confidentiality - Glossary">Confidentiality - Glossary</a></li></ul>
-<p><br />
-</p>
-<blockquote><p>Confidentiality, and therefore trust, can be broken when a person or an organisation can be identified in a disseminated dataset, either directly or indirectly.</p></blockquote>
-<p>One of the biggest challenges in making data publicly available is ensuring that no person or organisation is likely to be identified in the data.
-</p><p>Identification (often referred to as disclosure) occurs when someone learns something that they did not already know about another person or organisation through data that has been disseminated. This may be in the form of aggregate data (typically data presented in tables) or microdata (unit record data where each record represents observations for a person or an organisation). 
-</p>
-<h1>Definitions</h1>
-<p><b>Microdata</b> are unit record data containing individual responses to questions on survey questionnaires, or administrative forms. For example, data in response to the question ‘In what year were you born?’.
-</p><p><b>Aggregate data</b> (or macrodata) refers to aggregated microdata. For example, a count of the number of people of a particular age (obtained from the question ‘In what year were you born?’).	
-</p><p><br />
-</p>
-<h1><span id="Managing_the_risk_of_identification_(disclosure_control)"></span>Managing the risk of identification (disclosure control)</h1>
-<p>The process for managing the risk of identification is the same for any data that are disseminated, whether it is aggregate data or microdata. The first step is to assess potential identification risks. The second step is to manage the risks of identification by using an appropriate method to confidentialise the data.
-</p><p>The key elements in the process of managing the risk of identification are outlined in the following diagram. 
-</p>
-<h2>A process for managing identification risk</h2>
-<ol><li>Understand the legal and ethical obligations to protect the confidentiality of data. For more detail see Information sheets 1 and 2</li>
-<li>Establish policies and procedures to meet confidentiality obligations. For more detail see Information sheets 3, 4 and 5</li>
-<li>De-identify the data (remove any direct identifiers from the dataset)</li>
-<li>Assess potential identification risks by evaluating the factors that contribute to the likelihood of identification. For more detail see Information sheets 3, 4 and 5</li>
-<li>Test and evaluate to mitigate risk</li>
-<li>Manage the risks of identification - confidentialise. For more detail see Information sheets 3, 4 and 5</li>
-<li>Provide safe access to data. For more detail see Information sheet 5</li></ol>
-<h1>Assessment of potential identification risks</h1>
-<p>The likelihood of a person or an organisation being identified, and the confidentiality methods used to minimise the risk of identification, will vary depending on a range of factors including:
-</p>
-<ul><li>the amount of detail included in the data (the more detail, the higher the risk of identification);</li>
-<li>the sensitivity of the variables within the data (data items such as financial, health and medical or criminal record information may increase the risk of identification and would cause serious public concern if disclosed); and</li>
-<li>how the information is presented (aggregate data released in tables poses less risk of identification than the release of microdata).</li></ul>
-<h1>Confidentialisation to manage potential identification risk</h1>
-<p>The objective of confidentialisation is to meet legal and ethical obligations to protect the identity and privacy of individuals and organisations, while at the same time maximising the usefulness of the data for statistical and research purposes. While confidentialisation can be used to manage the risk of identification, it may not completely eliminate the risk.
-</p><p>There are two general methods (often referred to as statistical disclosure control methods) used to confidentialise data that are to be disseminated:
-</p>
-<ul><li>data modification methods (perturbation) which involve changing the data slightly to reduce the risk of disclosure, while retaining as much content and structure as possible; and</li>
-<li>data reduction methods which aim to control or limit the amount of detail available, without compromising the overall usefulness of the information available for research.</li></ul>
-<p><br />
-The techniques used to confidentialise data are similar for both aggregate data and microdata. However, the way in which the risks are assessed and the confidentiality techniques which are applied are different:
-</p>
-<ul><li>for aggregate data, the techniques are applied to cells in a table identified as unsafe, after aggregation; and</li>
-<li>for microdata, the techniques are applied to data items within individual unit records, or to individual unit records, identified as unsafe before aggregation or analysis.</li></ul>
-<p><br />
-This information sheet provides a broad overview of the process involved in managing the risks of identification. More detailed information is given in the subsequent information sheets in this series. 
-</p><p><a href="Confidentiality_-_How_to_confidentialise_data_the_basic_principles.html" title="Confidentiality - How to confidentialise data the basic principles">Information Sheet 4: ‘How to confidentialise data: the basic principles’</a> focuses on the risk assessment that applies to aggregate data presented in tables, and the popular confidentiality techniques that apply to both aggregate and microdata.
-</p><p><a href="Confidentiality_-_Managing_the_risk_of_disclosure_in_the_release_of_microdata.html" title="Confidentiality - Managing the risk of disclosure in the release of microdata">Information Sheet 5: ‘Managing the risk of disclosure in the release of microdata’</a> focuses on the risk assessment and confidentiality considerations that apply to microdata.
-</p>
-
-
-</div>
-
-</div>					
-				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>				<div class="visualClear"></div>
-							</div>
+			</div>
+			<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+			<div class="visualClear"></div>
 		</div>
-		<div id="mw-navigation">
-			<h2>Navigation menu</h2>
-			<div id="mw-panel">
-				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/"  title="Visit the main page"></a></div>
-						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
-			<h3 id="p-navigation-label">Navigation</h3>
-			<div class="body">
-								<ul>
-					<li id="n-mainpage-description"><a href="/" title="Visit the main page [z]" accesskey="z">Main page</a></li>				</ul>
-							</div>
-		</div>
-			</div></div><div id="footer" role="contentinfo">
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38578922-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-38578922-3');
-</script>
-
-						<ul id="footer-info">
-								<li id="footer-info-lastmod"> This page was last edited on 29 August 2018, at 05:09.</li>
-								<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
+	</div>
+	<div id="mw-navigation">
+		<h2>Navigation menu</h2>
+		<div id="mw-panel">
+			<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/" title="Visit the main page"></a></div>
+			<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+				<h3 id="p-navigation-label">Navigation</h3>
+				<div class="body">
+					<ul>
+						<li class="mw-list-item"><a href="/">Main page</a></li>
+						<li class="mw-list-item"><a href="/Policy.html">Policy</a></li>
+						<li class="mw-list-item"><a href="/Planning.html">Planning</a></li>
+						<li class="mw-list-item"><a href="/Publishing_your_data.html">Publishing your data</a></li>
+						<li class="mw-list-item"><a href="/How_to_use_data.gov.au.html">Data.gov.au</a>
+							<ul>
+								<li class="mw-list-item"><a href="/Introduction.html">Introduction</a></li>
+								<li class="mw-list-item"><a href="/Starting_on_datagovau.html">Starting on
+										data.gov.au</a></li>
+								<li class="mw-list-item"><a href="/Publishing_Data.html">Publishing data</a></li>
+								<li class="mw-list-item"><a href="/Data.html">Data</a></li>
+								<li class="mw-list-item"><a href="/Discovering_Metadata.html">Discovering metadata</a></li>
+								<li class="mw-list-item"><a href="/Using_Data.html">Using data</a></li>
+								<!--<li class="mw-list-item"><a href="/Site_Analytics.html">Site analytics</a></li>-->
+								<li class="mw-list-item"><a href="/Platform_Information.html">Platform information</a>
+								</li>
 							</ul>
-						
-										<ul id="footer-icons" class="noprint">
-										<li id="footer-copyrightico">
-						<img src="/resources/assets/licenses/cc-by.png" alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and" width="88" height="31"/>					</li>
-										
-									</ul>
-						<div style="clear: both;"></div>
+						</li>
+						<li class="mw-list-item"><a href="/Statistical_Data_Integration.html">Statistical Data
+								Integration</a></li>
+						<li class="mw-list-item"><a
+								href="https://data.gov.au/dataset/ds-dga-b942ba20-3504-402a-869b-01d9969a40ab/details">Public
+								Register of Data Integration Projects</a></li>
+
+					</ul>
+				</div>
+			</div>
 		</div>
-		
-	</body>
+	</div>
+	</div>
+	</div>
+	<div id="footer" role="contentinfo">
+
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38578922-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-38578922-3');
+		</script>
+
+		<ul id="footer-info">
+			<li id="footer-info-lastmod"> This page was last edited on 29 August 2018, at 05:09.</li>
+			<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia
+				licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
+		</ul>
+
+		<ul id="footer-icons" class="noprint">
+			<li id="footer-copyrightico">
+				<img src="/resources/assets/licenses/cc-by.png"
+					alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and"
+					width="88" height="31" /> </li>
+
+		</ul>
+		<div style="clear: both;"></div>
+	</div>
+
+</body>
+
 </html>

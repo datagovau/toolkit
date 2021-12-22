@@ -1,153 +1,316 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
+
 <head>
-<meta charset="UTF-8"/>
-<title>Confidentiality - How to confidentialise data the basic principles - Data.gov.au</title>
-<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
-<link rel="stylesheet" href="style.css"/>
-<script async="" src="site.js"></script>
-<meta name="google-site-verification" content="kajQGWxyqP9zf_uRRBX4nk0QxGRUDmzRnnbwkEBD_Yw" />
-<link rel="shortcut icon" href="http://toolkit.data.gov.au/favicon.ico"/>
-<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
+	<meta charset="UTF-8" />
+	<title>Confidentiality - How to confidentialise data the basic principles - Data.gov.au</title>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace(/(^|\s)client-nojs(\s|$)/,
+			"$1client-js$2");
+	</script>
+	<link rel="stylesheet" href="style.css" />
+	<script async="" src="site.js"></script>
+	<meta name="google-site-verification" content="kajQGWxyqP9zf_uRRBX4nk0QxGRUDmzRnnbwkEBD_Yw" />
+	<link rel="shortcut icon" href="http://toolkit.data.gov.au/favicon.ico" />
+	<!--[if lt IE 9]><script src="/html5shiv.js"></script><![endif]-->
 </head>
-<body>		<div id="mw-page-base" class="noprint"></div>
-		<div id="mw-head-base" class="noprint"></div>
-		<div id="content" class="mw-body" role="main">
-			<a id="top"></a>
-			<div class="mw-indicators mw-body-content">
-</div>
-<h1 id="firstHeading" class="firstHeading" lang="en">Confidentiality - How to confidentialise data the basic principles</h1>			<div id="bodyContent" class="mw-body-content">
-				<div id="siteSub" class="noprint">From Data.gov.au</div>				<div id="contentSub"></div>
-								<div id="jump-to-nav" class="mw-jump">
-					Jump to:					<a href="Confidentiality_-_How_to_confidentialise_data_the_basic_principles.html#mw-head">navigation</a>, 					<a href="Confidentiality_-_How_to_confidentialise_data_the_basic_principles.html#p-search">search</a>
+
+<body>
+	<div id="mw-page-base" class="noprint"></div>
+	<div id="mw-head-base" class="noprint"></div>
+	<div id="content" class="mw-body" role="main">
+		<a id="top"></a>
+		<div class="mw-indicators mw-body-content">
+		</div>
+		<h1 id="firstHeading" class="firstHeading" lang="en">Confidentiality - How to confidentialise data the basic
+			principles</h1>
+		<div id="bodyContent" class="mw-body-content">
+			<div id="siteSub" class="noprint">From Data.gov.au</div>
+			<div id="contentSub"></div>
+			<div id="jump-to-nav" class="mw-jump">
+				Jump to: <a
+					href="Confidentiality_-_How_to_confidentialise_data_the_basic_principles.html#mw-head">navigation</a>,
+				<a href="Confidentiality_-_How_to_confidentialise_data_the_basic_principles.html#p-search">search</a>
+			</div>
+			<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+				<div class="mw-parser-output">
+
+					<h1>Confidentiality series</h1>
+					<ul>
+						<li><a href="Confidentiality_-_What_is_it_and_why_is_it_important.html"
+								title="Confidentiality - What is it and why is it important">Confidentiality - What is
+								it and why is it important</a></li>
+						<li><a href="Confidentiality_-_The_obligation_to_protect_identity_and_privacy.html"
+								title="Confidentiality - The obligation to protect identity and privacy">Confidentiality
+								- The obligation to protect identity and privacy</a></li>
+						<li><a href="Confidentiality_-_Managing_identification_risks.html"
+								title="Confidentiality - Managing identification risks">Confidentiality - Managing
+								identification risks</a></li>
+						<li><a class="mw-selflink selflink">Confidentiality - How to confidentialise data the basic
+								principles</a></li>
+						<li><a href="Confidentiality_-_Managing_the_risk_of_disclosure_in_the_release_of_microdata.html"
+								title="Confidentiality - Managing the risk of disclosure in the release of microdata">Confidentiality
+								- Managing the risk of disclosure in the release of microdata</a></li>
+						<li><a href="Confidentiality_-_How_confidentiality_affects_research.html"
+								title="Confidentiality - How confidentiality affects research">Confidentiality - How
+								confidentiality affects research</a></li>
+						<li><a href="Confidentiality_-_Glossary.html" title="Confidentiality - Glossary">Confidentiality
+								- Glossary</a></li>
+					</ul>
+					<p><br />
+						Managing the risks of identification in disseminated data (also called disclosure control)
+						involves taking steps to evaluate and mitigate the risk that the identity of a particular person
+						or organisation may be disclosed.
+					</p>
+					<p>Risks of identification can be managed by confidentialising data. The aim is to protect the
+						identity of a person or an organisation, while at the same time maximising the usefulness of the
+						data.
+					</p>
+					<p>In simple cases, data can be manually confidentialised. However, the use of software is sometimes
+						necessary. Specialised skills and knowledge of the data are also required to correctly
+						confidentialise a dataset to minimise the risk of identification.
+					</p>
+					<p>This information sheet outlines some common techniques for confidentialising data. The
+						information is provided as a guide only and gives simple examples, using data presented in
+						tables, to illustrate the concepts. However, most of the techniques apply to both aggregate and
+						microdata.
+					</p>
+					<p>Issues specific to the management of the confidentiality of microdata are discussed in
+						Information sheet 5, ‘Managing the risk of disclosure in the release of microdata’.
+					</p>
+					<p><br />
+					</p>
+					<h1>Identification risks in aggregate data</h1>
+					<p>Aggregate data can be disseminated in various forms including tables, maps and graphs. Aggregate
+						data in any form can present an identification risk if individual responses can be estimated or
+						derived from the output (for example, outliers in a graph).
+					</p>
+					<p>Tables are the most common way of presenting aggregate data and are the focus of the following
+						discussion.
+					</p>
+					<p>There are two main types of tables:
+					</p>
+					<ul>
+						<li>Count (frequency) tables: cells contain the number of individuals or organisations
+							contributing to the cell (e.g. the number of people in various age groups, or the number of
+							businesses in each industry).</li>
+						<li>Magnitude tables: cells contain values calculated from a numeric response (e.g. total income
+							or profit).</li>
+					</ul>
+					<p><br />
+						It is sometimes possible to deduce information about a particular person or organisation from
+						these two types of tables.
+					</p>
+					<p>For example, when a cell in a frequency table has a low count (that is, only a very small number
+						of contributors), it may be possible to deduce information about a particular person or
+						organisation using the information you already know and the additional information presented in
+						the table. This poses an identification (or disclosure) risk.
+					</p>
+					<p>In magnitude tables, table cells present an identification (or disclosure) risk when they are
+						dominated by values relating to one or two businesses or individuals.
+					</p>
+					<p>Further identification risks exist if users have access to multiple tables that contain some
+						common elements. It may be possible to use information from one table to determine the identity
+						of a person or organisation contributing to a second table. This means it is important to keep
+						track of all information that is released from the dataset.
+					</p>
+					<p><br />
+					</p>
+					<h1><span id="When_should_a_cell_be_confidentialised?"></span>When should a cell be
+						confidentialised?</h1>
+					<p>To identify table cells that pose an identification (or disclosure) risk, confidentiality ruIes
+						must be determined and applied to each cell in a table. If a cell fails such rules, then further
+						investigation or action is needed to minimise the risk of identification.
+					</p>
+					<p>Two common rules used to assess identification risk in a table cell are:
+					</p>
+					<ul>
+						<li>The frequency rule (also called the threshold rule), which sets a threshold value for the
+							minimum number of units (contributors) in any cell. Common threshold values are 3, 5 and 10.
+						</li>
+						<li>The cell dominance rule (also called the cell concentration rule) which applies to cells
+							where a small number of data providers contribute a large percentage to the cell total.</li>
+					</ul>
+					<p>Setting values for these rules is the responsibility of individual data custodians. The value
+						used will depend on that custodian’s assessment of the identification risk. Some datasets may be
+						more sensitive than others while legislation and organisational policies will also influence the
+						values that are set and applied.
+					</p>
+					<p><br />
+					</p>
+					<h2>FREQUENCY RULE</h2>
+					<p>The frequency rule is best applied to count tables. While it can be used for magnitude tables,
+						the underlying frequency data (i.e. the number of contributing units for each cell) is needed to
+						apply the rule.
+					</p>
+					<p>Sometimes zero cells (cells with no contributors, or cells where all respondents reported a zero
+						value for a magnitude table), or 100% cells (where all contributors within a category have a
+						particular characteristic) are also considered confidential.
+					</p>
+					<p>A 100% cell that may not require protection is included in example 1. In this example all 15–19
+						year olds have a low income (20). This result may not be unexpected or sensitive and the cell
+						may not require protection. However, if this same example related to a very small community and
+						the 100% cell was instead for 15–19 year olds with high income then the cell may need to be
+						protected from an identification risk as the result is unexpected and may be considered
+						sensitive.
+					</p>
+					<p><br />
+					</p>
+					<h2>CELL DOMINANCE RULE</h2>
+					<p>The cell dominance rule is also referred to as the (n,k) rule and is used for magnitude tables.
+					</p>
+					<p>According to the cell dominance rule, a cell is regarded as unsafe if the combined contributions
+						of the ‘n’ largest members of the cell represent more than ‘k’% of the total value of the cell.
+					</p>
+					<p>The 'n' and 'k' values are determined by the data custodian.
+					</p>
+					<p><br />
+					</p>
+					<h1>Techniques to confidentialise data</h1>
+					<p>There are various techniques used to confidentialise data that pose an identification risk –
+						either as an unsafe cell in aggregated data, or as unsafe records in microdata. These are
+						grouped into two broad groups: data reduction methods and data modification methods.
+					</p>
+					<h2>DATA REDUCTION METHODS</h2>
+					<p>These methods maintain confidentiality of respondents by selecting appropriate aggregations or in
+						presentation of data.
+					</p>
+					<p><br />
+						1. Combining (or collapsing) categories
+					</p>
+					<p>This method involves combining several response categories into one, or reducing the amount of
+						classificatory detail available in a table or in microdata. It is often used for magnitude data
+						and sometimes for count data.
+						Combining or collapsing categories is best used when a handful of responses have a small number
+						of contributors, or when a table is very detailed and there are many small cells.
+						A good knowledge of the subject is important when combining or collapsing categories to ensure
+						that the new category groupings are relevant to data users.
+					</p>
+					<p>2. Primary and secondary suppression
+						Data suppression involves not releasing information for unsafe cells, or, if nothing else works,
+						deleting individual records or data items from the microdata file.
+						If a table contains totals, it may be possible to calculate the value of a suppressed cell by
+						subtracting the value of other cells from the total. At least one additional cell may also need
+						to be suppressed to prevent identification.
+						A cell that is suppressed because it fails one of the confidentiality rules is called a primary
+						suppression cell. The suppression of other cells (to prevent the disclosure of a primary
+						suppression cell) is called secondary suppression or consequential suppression.
+					</p>
+					<h2><span id="DATA_MODIFICATION_METHODS_(PERTURBATION)"></span>DATA MODIFICATION METHODS
+						(PERTURBATION)</h2>
+					<p>These methods maintain respondent confidentiality by altering the identifiable data in a small
+						way without affecting aggregate results.
+					</p>
+					<h3>Data rounding</h3>
+					<p>Data rounding involves slightly altering small cells in a table to ensure results from analysis
+						based on the data are not significantly affected, but the original values cannot be known with
+						certainty. Data rounding may be random or controlled.
+					</p>
+					<p>1. <b>Random rounding</b> is used in count tables and involves replacing small values that would
+						appear in a table with other small random numbers. This results in some data distortion so that
+						the sum of cell values within or between tables will not equal the table total.
+						Random rounding to base X involves randomly changing every number in a table to a multiple of X.
+						For example, random rounding to base 3 (RR3) means that all values are rounded to the nearest
+						multiple of 3. Each value, including the totals, is rounded independently. Values which are
+						already a multiple of 3 are left unchanged.
+					</p>
+					<p>2. Graduated random rounding is a rounding method used for magnitude tables. It is similar to
+						random rounding, however after specified cell sizes the rounding base increases. That is, a
+						small number will have a smaller rounding base than a large number. This ensures the protection
+						offered does not diminish for large-valued cells.
+					</p>
+					<p>3. Controlled rounding is a form of random rounding but it is constrained to have the sum of the
+						cells equal to the appropriate row or column totals within a table. This method may not provide
+						consistency between tables.
+					</p>
+					<p><br />
+					</p>
+					<h2>SAMPLING</h2>
+					<p>Sampling provides some protection against identification risks because it reduces the certainty
+						about whether a particular individual or organisation is in the data. A value may be unique in
+						the sample, but not necessarily unique in the population.
+					</p>
+
+
 				</div>
-				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output">
 
-<h1>Confidentiality series</h1>
-<ul><li><a href="Confidentiality_-_What_is_it_and_why_is_it_important.html" title="Confidentiality - What is it and why is it important">Confidentiality - What is it and why is it important</a></li>
-<li><a href="Confidentiality_-_The_obligation_to_protect_identity_and_privacy.html" title="Confidentiality - The obligation to protect identity and privacy">Confidentiality - The obligation to protect identity and privacy</a></li>
-<li><a href="Confidentiality_-_Managing_identification_risks.html" title="Confidentiality - Managing identification risks">Confidentiality - Managing identification risks</a></li>
-<li><a class="mw-selflink selflink">Confidentiality - How to confidentialise data the basic principles</a></li>
-<li><a href="Confidentiality_-_Managing_the_risk_of_disclosure_in_the_release_of_microdata.html" title="Confidentiality - Managing the risk of disclosure in the release of microdata">Confidentiality - Managing the risk of disclosure in the release of microdata</a></li>
-<li><a href="Confidentiality_-_How_confidentiality_affects_research.html" title="Confidentiality - How confidentiality affects research">Confidentiality - How confidentiality affects research</a></li>
-<li><a href="Confidentiality_-_Glossary.html" title="Confidentiality - Glossary">Confidentiality - Glossary</a></li></ul>
-<p><br />
-Managing the risks of identification in disseminated data (also called disclosure control) involves taking steps to evaluate and mitigate the risk that the identity of a particular person or organisation may be disclosed. 
-</p><p>Risks of identification can be managed by confidentialising data. The aim is to protect the identity of a person or an organisation, while at the same time maximising the usefulness of the data.
-</p><p>In simple cases, data can be manually confidentialised. However, the use of software is sometimes necessary. Specialised skills and knowledge of the data are also required to correctly confidentialise a dataset to minimise the risk of identification.
-</p><p>This information sheet outlines some common techniques for confidentialising data. The information is provided as a guide only and gives simple examples, using data presented in tables, to illustrate the concepts. However, most of the techniques apply to both aggregate and microdata. 
-</p><p>Issues specific to the management of the confidentiality of microdata are discussed in Information sheet 5, ‘Managing the risk of disclosure in the release of microdata’.
-</p><p><br />
-</p>
-<h1>Identification risks in aggregate data</h1>
-<p>Aggregate data can be disseminated in various forms including tables, maps and graphs. Aggregate data in any form can present an identification risk if individual responses can be estimated or derived from the output (for example, outliers in a graph). 
-</p><p>Tables are the most common way of presenting aggregate data and are the focus of the following discussion. 
-</p><p>There are two main types of tables:
-</p>
-<ul><li>Count (frequency) tables: cells contain the number of individuals or organisations contributing to the cell (e.g. the number of people in various age groups, or the number of businesses in each industry).</li>
-<li>Magnitude tables: cells contain values calculated from a numeric response (e.g. total income or profit).</li></ul>
-<p><br />
-It is sometimes possible to deduce information about a particular person or organisation from these two types of tables. 
-</p><p>For example, when a cell in a frequency table has a low count (that is, only a very small number of contributors), it may be possible to deduce information about a particular person or organisation using the information you already know and the additional information presented in the table. This poses an identification (or disclosure) risk.
-</p><p>In magnitude tables, table cells present an identification (or disclosure) risk when they are dominated by values relating to one or two businesses or individuals.
-</p><p>Further identification risks exist if users have access to multiple tables that contain some common elements. It may be possible to use information from one table to determine the identity of a person or organisation contributing to a second table. This means it is important to keep track of all information that is released from the dataset.
-</p><p><br />
-</p>
-<h1><span id="When_should_a_cell_be_confidentialised?"></span>When should a cell be confidentialised?</h1>
-<p>To identify table cells that pose an identification (or disclosure) risk, confidentiality ruIes must be determined and applied to each cell in a table. If a cell fails such rules, then further investigation or action is needed to minimise the risk of identification.
-</p><p>Two common rules used to assess identification risk in a table cell are: 
-</p>
-<ul><li>The frequency rule (also called the threshold rule), which sets a threshold value for the minimum number of units (contributors) in any cell. Common threshold values are 3, 5 and 10.</li>
-<li>The cell dominance rule (also called the cell concentration rule) which applies to cells where a small number of data providers contribute a large percentage to the cell total.</li></ul>
-<p>Setting values for these rules is the responsibility of individual data custodians. The value used will depend on that custodian’s assessment of the identification risk. Some datasets may be more sensitive than others while legislation and organisational policies will also influence the values that are set and applied.
-</p><p><br />
-</p>
-<h2>FREQUENCY RULE</h2>
-<p>The frequency rule is best applied to count tables. While it can be used for magnitude tables, the underlying frequency data (i.e. the number of contributing units for each cell) is needed to apply the rule.
-</p><p>Sometimes zero cells (cells with no contributors, or cells where all respondents reported a zero value for a magnitude table), or 100% cells (where all contributors within a category have a particular characteristic) are also considered confidential. 
-</p><p>A 100% cell that may not require protection is included in example 1. In this example all 15–19 year olds have a low income (20). This result may not be unexpected or sensitive and the cell may not require protection. However, if this same example related to a very small community and the 100% cell was instead for 15–19 year olds with high income then the cell may need to be protected from an identification risk as the result is unexpected and may be considered sensitive.
-</p><p><br />
-</p>
-<h2>CELL DOMINANCE RULE</h2>
-<p>The cell dominance rule is also referred to as the (n,k) rule and is used for magnitude tables. 
-</p><p>According to the cell dominance rule, a cell is regarded as unsafe if the combined contributions of the ‘n’ largest members of the cell represent more than ‘k’% of the total value of the cell. 
-</p><p>The 'n' and 'k' values are determined by the data custodian. 
-</p><p><br />
-</p>
-<h1>Techniques to confidentialise data</h1>
-<p>There are various techniques used to confidentialise data that pose an identification risk – either as an unsafe cell in aggregated data, or as unsafe records in microdata. These are grouped into two broad groups: data reduction methods and data modification methods. 
-</p>
-<h2>DATA REDUCTION METHODS</h2>
-<p>These methods maintain confidentiality of respondents by selecting appropriate aggregations or in presentation of data.
-</p><p><br />
-1. Combining (or collapsing) categories
-</p><p>This method involves combining several response categories into one, or reducing the amount of classificatory detail available in a table or in microdata. It is often used for magnitude data and sometimes for count data. 
-Combining or collapsing categories is best used when a handful of responses have a small number of contributors, or when a table is very detailed and there are many small cells.
-A good knowledge of the subject is important when combining or collapsing categories to ensure that the new category groupings are relevant to data users.
-</p><p>2. Primary and secondary suppression
-Data suppression involves not releasing information for unsafe cells, or, if nothing else works, deleting individual records or data items from the microdata file. 
-If a table contains totals, it may be possible to calculate the value of a suppressed cell by subtracting the value of other cells from the total. At least one additional cell may also need to be suppressed to prevent identification.
-A cell that is suppressed because it fails one of the confidentiality rules is called a primary suppression cell. The suppression of other cells (to prevent the disclosure of a primary suppression cell) is called secondary suppression or consequential suppression.
-</p>
-<h2><span id="DATA_MODIFICATION_METHODS_(PERTURBATION)"></span>DATA MODIFICATION METHODS (PERTURBATION)</h2>
-<p>These methods maintain respondent confidentiality by altering the identifiable data in a small way without affecting aggregate results.
-</p>
-<h3>Data rounding</h3>
-<p>Data rounding involves slightly altering small cells in a table to ensure results from analysis based on the data are not significantly affected, but the original values cannot be known with certainty. Data rounding may be random or controlled. 
-</p><p>1. <b>Random rounding</b> is used in count tables and involves replacing small values that would appear in a table with other small random numbers. This results in some data distortion so that the sum of cell values within or between tables will not equal the table total.
-Random rounding to base X involves randomly changing every number in a table to a multiple of X. For example, random rounding to base 3 (RR3) means that all values are rounded to the nearest multiple of 3. Each value, including the totals, is rounded independently. Values which are already a multiple of 3 are left unchanged.
-</p><p>2. Graduated random rounding is a rounding method used for magnitude tables. It is similar to random rounding, however after specified cell sizes the rounding base increases. That is, a small number will have a smaller rounding base than a large number. This ensures the protection offered does not diminish for large-valued cells.
-</p><p>3. Controlled rounding is a form of random rounding but it is constrained to have the sum of the cells equal to the appropriate row or column totals within a table. This method may not provide consistency between tables.
-</p><p><br />
-</p>
-<h2>SAMPLING</h2>
-<p>Sampling provides some protection against identification risks because it reduces the certainty about whether a particular individual or organisation is in the data. A value may be unique in the sample, but not necessarily unique in the population.
-</p>
-
-
-</div>
-
-</div>					
-				<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>				<div class="visualClear"></div>
-							</div>
+			</div>
+			<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+			<div class="visualClear"></div>
 		</div>
-		<div id="mw-navigation">
-			<h2>Navigation menu</h2>
-			<div id="mw-panel">
-				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/"  title="Visit the main page"></a></div>
-						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
-			<h3 id="p-navigation-label">Navigation</h3>
-			<div class="body">
-								<ul>
-					<li id="n-mainpage-description"><a href="/" title="Visit the main page [z]" accesskey="z">Main page</a></li>				</ul>
-							</div>
-		</div>
-			</div></div><div id="footer" role="contentinfo">
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38578922-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-38578922-3');
-</script>
-
-						<ul id="footer-info">
-								<li id="footer-info-lastmod"> This page was last edited on 29 August 2018, at 05:09.</li>
-								<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
+	</div>
+	<div id="mw-navigation">
+		<h2>Navigation menu</h2>
+		<div id="mw-panel">
+			<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/" title="Visit the main page"></a></div>
+			<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+				<h3 id="p-navigation-label">Navigation</h3>
+				<div class="body">
+					<ul>
+						<li class="mw-list-item"><a href="/">Main page</a></li>
+						<li class="mw-list-item"><a href="/Policy.html">Policy</a></li>
+						<li class="mw-list-item"><a href="/Planning.html">Planning</a></li>
+						<li class="mw-list-item"><a href="/Publishing_your_data.html">Publishing your data</a></li>
+						<li class="mw-list-item"><a href="/How_to_use_data.gov.au.html">Data.gov.au</a>
+							<ul>
+								<li class="mw-list-item"><a href="/Introduction.html">Introduction</a></li>
+								<li class="mw-list-item"><a href="/Starting_on_datagovau.html">Starting on
+										data.gov.au</a></li>
+								<li class="mw-list-item"><a href="/Publishing_Data.html">Publishing data</a></li>
+								<li class="mw-list-item"><a href="/Data.html">Data</a></li>
+								<li class="mw-list-item"><a href="/Discovering_Metadata.html">Discovering metadata</a></li>
+								<li class="mw-list-item"><a href="/Using_Data.html">Using data</a></li>
+								<!--<li class="mw-list-item"><a href="/Site_Analytics.html">Site analytics</a></li>-->
+								<li class="mw-list-item"><a href="/Platform_Information.html">Platform information</a>
+								</li>
 							</ul>
-						
-										<ul id="footer-icons" class="noprint">
-										<li id="footer-copyrightico">
-						<img src="/resources/assets/licenses/cc-by.png" alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and" width="88" height="31"/>					</li>
-										
-									</ul>
-						<div style="clear: both;"></div>
+						</li>
+						<li class="mw-list-item"><a href="/Statistical_Data_Integration.html">Statistical Data
+								Integration</a></li>
+						<li class="mw-list-item"><a
+								href="https://data.gov.au/dataset/ds-dga-b942ba20-3504-402a-869b-01d9969a40ab/details">Public
+								Register of Data Integration Projects</a></li>
+
+					</ul>
+				</div>
+			</div>
 		</div>
-		
-	
-	</body>
+	</div>
+	</div>
+	</div>
+	<div id="footer" role="contentinfo">
+
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38578922-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-38578922-3');
+		</script>
+
+		<ul id="footer-info">
+			<li id="footer-info-lastmod"> This page was last edited on 29 August 2018, at 05:09.</li>
+			<li id="footer-info-copyright">Content is available under the Creative Commons Attribution 3.0 Australia
+				licence with the exception of the Commonwealth Coat of Arms and unless otherwise noted.</li>
+		</ul>
+
+		<ul id="footer-icons" class="noprint">
+			<li id="footer-copyrightico">
+				<img src="/resources/assets/licenses/cc-by.png"
+					alt="the Creative Commons Attribution 3.0 Australia licence with the exception of the Commonwealth Coat of Arms and"
+					width="88" height="31" /> </li>
+
+		</ul>
+		<div style="clear: both;"></div>
+	</div>
+
+
+</body>
+
 </html>
